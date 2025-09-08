@@ -1,9 +1,19 @@
-echo "<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>My GitHub Page</title>
+  <title>My GitHub Page with JSON</title>
 </head>
 <body>
-  <h1>Hello from Victoria's GitHub Pages 🚀</h1>
+  <h1>GitHub Pages + JSON 🚀</h1>
+  <pre id="output"></pre>
+
+  <script>
+    fetch("data.json")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+      })
+      .catch(err => console.error("Error loading JSON:", err));
+  </script>
 </body>
-</html>" > index.html
+</html>
