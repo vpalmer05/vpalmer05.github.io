@@ -1,19 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My GitHub Page with JSON</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Villa Vista — Login</title>
+  <link rel="stylesheet" href="vistastyles.css">
 </head>
-<body>
-  <h1>GitHub Pages + JSON 🚀</h1>
-  <pre id="output"></pre>
+<body class="vv-login">
 
-  <script>
-    fetch("data.json")
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById("output").textContent = JSON.stringify(data, null, 2);
-      })
-      .catch(err => console.error("Error loading JSON:", err));
-  </script>
+  <!--Split-->
+  <div class="split">
+    <!--Left-->
+    <aside class="hero">
+      <div class="copyright">© 2025 Villa Vista Co.</div>
+    </aside>
+
+    <!--Right-->
+    <main class="panel" role="main">
+      <section aria-labelledby="login-heading" class="card">
+        <h1 id="login-heading" class="title">Welcome to <span class="brand">VillaVista!</span></h1>
+        <p class="subtitle">Log in to your account</p>
+
+        <!-- Login -->
+        <form action="#" method="post" class="form">
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" />
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="••••••••" />
+          </div>
+
+          <!-- Does not route yet-->
+          <button type="submit" class="btn btn-primary">Log In</button>
+        </form>
+
+        <!-- Temporary nav -->
+        <nav aria-label="Temporary Portal Links" class="preview">
+          <p class="preview-label">Preview portals:</p>
+          <div class="preview-actions">
+            <a class="btn btn-accent" href="clientportal.html">Client/Seller Portal</a>
+            <a class="btn btn-ghost" href="realtorportal.html">Realtor Portal</a>
+          </div>
+        </nav>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
