@@ -1,0 +1,4 @@
+[
+  { "email": "client@example.com", "password": "client123", "portal": "clientportal.html" },
+  { "email": "realtor@example.com", "password": "realtor123", "portal": "realtorportal.html" }
+]
