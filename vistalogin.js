@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const passwordInput = document.getElementById("password");
 
   form.addEventListener("submit", async (e) => {
-    e.preventDefault(); // Prevent form from actually submitting
+    e.preventDefault(); // stop the default form POST
 
     try {
-      const res = await fetch("api/users.json");
+      const res = await fetch("user.json"); // fetch your credentials file
       const users = await res.json();
 
       const user = users.find(
@@ -15,14 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
       if (user) {
-        // Redirect to the appropriate portal
+        // redirect to the correct portal page
         window.location.href = user.portal;
       } else {
         alert("❌ Invalid email or password.");
       }
     } catch (err) {
-      console.error(err);
-      alert("⚠️ Error accessing user data.");
+      console.error("Error loading users:", err);
+      alert("⚠️ Could not check login. Please try again later.");
     }
   });
 });
