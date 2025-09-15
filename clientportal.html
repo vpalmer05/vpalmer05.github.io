@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="vistastyles.css">
 <head>
   <meta charset="UTF-8" />
   <title>Client Portal</title>
+  <link rel="stylesheet" href="vistastyles.css">
 </head>
-<body>
-  <header>
-    <h1>Client Home</h1>
-    <nav>
-      <a href="index.html">Log Out</a>
+
+<body class="vv-client">
+
+  <!-- Top nav -->
+  <header class="client-header">
+    <h1 class="client-title">Client Home</h1>
+    <nav class="client-nav">
+      <a href="profile.html">Profile</a>
+      <a href="messages.html">Messages</a>
+      <a href="VVLogin.html">Log Out</a>
     </nav>
   </header>
 
-  <main>
-    <nav aria-label="Primary">
-      <ul>
-        <li><a href="listings.html">Listings</a></li>
-        <li><a href="favorites.html">Favorites</a></li>
-        <li><a href="sell.html">Sell a Property</a></li>
-        <li><a href="messages.html">Messages</a></li>
-        <li><a href="profile.html">Profile</a></li>
-      </ul>
-    </nav>
+  <main class="client-main">
+    <section class="card-grid">
+
+      <!-- Listings-->
+      <a href="listings.html" class="client-card">
+        <img src="images/listings.jpg" alt="Listings" class="client-card-image" />
+        <div class="client-card-title">Listings</div>
+      </a>
+
+      <!-- Favorites-->
+      <a href="favorites.html" class="client-card">
+        <img src="images/favorites.jpg" alt="Favorites" class="client-card-image" />
+        <div class="client-card-title">Favorites</div>
+      </a>
+
+      <!-- Sell-->
+      <a href="sell.html" class="client-card">
+        <img src="images/sell.jpg" alt="Sell a Property" class="client-card-image" />
+        <div class="client-card-title">Sell a Property</div>
+      </a>
+
+    </section>
   </main>
 
-  <footer>
-    <small>© 2025 VillaVista Co.</small>
+  <footer class="client-footer">
+    <small>© 2025 Villa Vista Co.</small>
   </footer>
+
 </body>
 </html>
