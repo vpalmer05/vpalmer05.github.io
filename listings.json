@@ -1,0 +1,26 @@
+[
+  {
+    "price": "$450,000",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "sqft": 1820,
+    "address": "123 Maple Street, Springfield, OH 45503",
+    "image": "images/house1.jpg"
+  },
+  {
+    "price": "$600,000",
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "sqft": 2450,
+    "address": "456 Oak Avenue, Dayton, OH 45402",
+    "image": "images/house2.jpg"
+  },
+  {
+    "price": "$325,000",
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "sqft": 1380,
+    "address": "789 Pine Lane, Columbus, OH 43215",
+    "image": "images/house3.jpg"
+  }
+]
