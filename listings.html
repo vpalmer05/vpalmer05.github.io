@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="vistastyles.css">
 <head>
   <meta charset="UTF-8" />
   <title>Listings</title>
+  <link rel="stylesheet" href="vistastyles.css">
 </head>
-<body>
-  <header>
-    <h1>Listings</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Log Out</a></li>
-        <li><a href="clientportal.html">Home</a></li>
-      </ul>
+
+<body class="vv-client">
+
+  <header class="client-header">
+    <h1 class="client-title">Listings</h1>
+    <nav class="client-nav">
+      <a href="clientportal.html">Home</a>
+      <a href="messages.html">Messages</a>
+      <a href="VVLogin.html">Log Out</a>
     </nav>
   </header>
 
-  <main>
-    <p>Placeholder listings</p>
+  <main class="listing-main">
+    <section class="listing-grid" id="listingContainer">
+
+      <!-- Listing Cards-->
+      <article class="listing-card">
+        <img src="images/house1.jpg" alt="Sample House" class="listing-image" />
+
+        <div class="listing-details">
+          <p class="listing-price">$000,000</p>
+          <p class="listing-info"># bed | # bath | #,### sqft</p>
+          <p class="listing-address">123 Sample Street, City, ST 00000</p>
+        </div>
+      </article>
+
+    </section>
   </main>
 
-  <footer>
+  <footer class="client-footer">
     <small>© 2025 VillaVista Co.</small>
   </footer>
+<script src="vvjstest.js"></script>
 </body>
 </html>
