@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="vistastyles.css">
 <head>
   <meta charset="UTF-8" />
   <title>Favorites</title>
+  <link rel="stylesheet" href="vistastyles.css">
 </head>
-<body>
-  <header>
-    <h1>Favorites</h1>
-    <nav>
-      <ul>
-      <li><a href="index.html">Log Out</a></li>
-      <li><a href="clientportal.html">Home</a></li>
-      </ul>
+
+<body class="vv-client">
+
+  <header class="client-header">
+    <h1 class="client-title">Favorites</h1>
+    <nav class="client-nav">
+      <a href="clientportal.html">Home</a>
+      <a href="messages.html">Messages</a>
+      <a href="VVLogin.html">Log Out</a>
     </nav>
   </header>
 
-  <main>
-    <p>Placeholder for favorites</p>
+  <main class="listing-main">
+    <section class="listing-grid" id="favoritesContainer">
+    </section>
   </main>
 
-  <footer>
+  <footer class="client-footer">
     <small>© 2025 VillaVista Co.</small>
   </footer>
+
+  <script src="vvfavorites.js"></script>
 </body>
 </html>
