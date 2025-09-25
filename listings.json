@@ -1,26 +1,1397 @@
 [
   {
-    "price": "$450,000",
-    "bedrooms": 3,
-    "bathrooms": 2,
-    "sqft": 1820,
-    "address": "123 Maple Street, Springfield, OH 45503",
-    "image": "images/house1.jpg"
+    "id": 1,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
   },
   {
-    "price": "$600,000",
-    "bedrooms": 4,
-    "bathrooms": 3,
-    "sqft": 2450,
-    "address": "456 Oak Avenue, Dayton, OH 45402",
-    "image": "images/house2.jpg"
+    "id": 2,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
   },
   {
-    "price": "$325,000",
-    "bedrooms": 2,
-    "bathrooms": 2,
-    "sqft": 1380,
-    "address": "789 Pine Lane, Columbus, OH 43215",
-    "image": "images/house3.jpg"
+    "id": 3,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 4,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 5,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 6,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 7,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 8,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 9,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 10,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 11,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 12,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 13,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 14,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 15,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 16,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 17,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 18,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 19,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 20,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 21,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 22,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 23,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 24,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 25,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 26,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 27,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 28,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 29,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 30,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 31,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 32,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 33,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 34,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 35,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 36,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 37,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 38,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 39,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 40,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 41,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 42,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 43,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 44,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 45,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 46,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 47,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 48,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 49,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 50,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 51,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 52,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 53,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 54,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 55,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 56,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 57,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 58,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 59,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 60,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 61,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 62,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 63,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 64,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 65,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 66,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 67,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 68,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 69,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 70,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 71,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 72,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 73,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 74,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 75,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 76,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 77,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 78,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 79,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 80,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 81,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 82,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 83,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 84,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 85,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 86,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 87,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 88,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 89,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 90,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 91,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 92,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 93,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 94,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 95,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 96,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 97,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 98,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 99,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 100,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 101,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 102,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 103,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 104,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 105,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 106,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 107,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 108,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 109,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 110,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 111,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 112,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 113,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 114,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 115,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 116,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 117,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 118,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 119,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 120,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 121,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 122,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 123,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 124,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 125,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 126,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 127,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 128,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 129,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 130,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 131,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 132,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 133,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 134,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 135,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 136,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 137,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 138,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 139,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 140,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 141,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 142,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 143,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 144,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 145,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 146,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 147,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 148,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 149,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 150,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 151,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 152,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 153,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 154,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
+  },
+  {
+    "id": 155,
+    "price": "",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "",
+    "type": ""
   }
 ]
