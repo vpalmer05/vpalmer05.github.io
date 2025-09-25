@@ -269,3 +269,30 @@ body.vv-client {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   z-index: 1;
 }
+/* Listing filters */
+.listing-filters {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 2rem;
+  flex-wrap: wrap;
+}
+
+.listing-filters input,
+.listing-filters select,
+.listing-filters button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.listing-filters button {
+  background: var(--gold);
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.listing-filters button:hover {
+  background: var(--gold-700);
+}

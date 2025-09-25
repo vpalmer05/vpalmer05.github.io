@@ -18,6 +18,27 @@
   </header>
 
   <main class="listing-main">
+    <!-- Filters -->
+<section class="listing-filters">
+  <input type="text" id="searchInput" placeholder="Search by address or city..." />
+
+  <select id="bedFilter">
+    <option value="">Any Bedrooms</option>
+    <option value="2">2+ Bedrooms</option>
+    <option value="3">3+ Bedrooms</option>
+    <option value="4">4+ Bedrooms</option>
+  </select>
+
+  <select id="priceFilter">
+    <option value="">Any Price</option>
+    <option value="200000">Up to $200k</option>
+    <option value="400000">Up to $400k</option>
+    <option value="600000">Up to $600k</option>
+  </select>
+
+  <button id="resetFilters">Reset</button>
+</section>
+
     <section class="listing-grid" id="listingContainer">
 
       <!-- Listing Cards-->

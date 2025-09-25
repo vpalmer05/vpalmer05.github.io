@@ -1,25 +1,30 @@
-// Path to JSON (make sure listings.json is in the same folder as listing.html)
-const dataUrl = 'listings.json';
+// Paths to JSON files
+const listingsUrl = 'listings.json';
+const imagesUrl = 'listingimages.json';
 
 // Grab container
 const container = document.getElementById('listingContainer');
 
-// Fetch and populate listings
-fetch(dataUrl)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
+// Fetch both datasets
+Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
+  .then(async ([listingsRes, imagesRes]) => {
+    if (!listingsRes.ok || !imagesRes.ok) {
+      throw new Error("Failed to load JSON data");
     }
-    return response.json();
-  })
-  .then(data => {
-    console.log("Loaded listings:", data); // Debugging
+    const listings = await listingsRes.json();
+    const images = await imagesRes.json();
 
-    // Clear out any placeholder card in HTML
+    // Merge listings with their images
+    const listingsWithImages = listings.map(listing => {
+      const match = images.find(img => img.listing_id === listing.id);
+      return { ...listing, image: match ? match.image : "images/placeholder.jpg" };
+    });
+
+    // Clear container
     container.innerHTML = "";
 
-    // Create a card for each listing
-    data.forEach(home => {
+    // Render each listing
+    listingsWithImages.forEach(home => {
       const card = document.createElement('article');
       card.className = 'listing-card';
 
@@ -28,7 +33,7 @@ fetch(dataUrl)
         <div class="listing-details">
           <p class="listing-price">${home.price}</p>
           <p class="listing-info">
-            ${home.bedrooms} bed | ${home.bathrooms} bath | ${home.sqft.toLocaleString()} sqft
+            ${home.bedrooms ?? "?"} bed | ${home.bathrooms ?? "?"} bath | ${home.sqft ? home.sqft.toLocaleString() : "?"} sqft
           </p>
           <p class="listing-address">${home.address}</p>
         </div>
