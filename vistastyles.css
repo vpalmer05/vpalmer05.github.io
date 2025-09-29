@@ -296,3 +296,36 @@ body.vv-client {
 .listing-filters button:hover {
   background: var(--gold-700);
 }
+
+/* Sell Portal */
+.sell-main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.sell-tabs {
+  margin: 1rem 0 2rem;
+}
+
+.sell-tabs button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--navy);
+  border-radius: 20px;
+  background: var(--cream);
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+.sell-tabs .active {
+  background: var(--navy);
+  color: var(--cream);
+}
+
+.sell-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}

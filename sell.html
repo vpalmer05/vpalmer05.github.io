@@ -1,27 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="vistastyles.css">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sell</title>
+  <meta charset="UTF-8">
+  <title>Selling</title>
+  <link rel="stylesheet" href="vistastyles.css">
 </head>
-<body>
-  <header>
-    <h1>Sell</h1>
-    <nav>
-      <ul>
-      <li><a href="index.html">Log Out</a></li>
-      <li><a href="clientportal.html">Home</a></li>
-      </ul>
+
+<body class="vv-client">
+
+  <header class="client-header">
+    <h1>Selling</h1>
+    <nav class="client-nav">
+      <a href="clientportal.html">Home</a>
+      <a href="messages.html">Messages</a>
+      <a href="index.html">Log Out</a>
     </nav>
   </header>
 
-  <main>
-    <p>Placeholder for Selling Houses</p>
+  <main class="sell-main">
+    <h2>Start listing your property</h2>
+
+    <div class="sell-tabs">
+      <button class="active">Property Information</button>
+      <button>Seller Details</button>
+      <button>Choose your Realtor</button>
+    </div>
+
+    <div class="sell-section">
+      <img src="sellicon.jpg">
+
+      <form>
+        <input type="text" placeholder="Property Address">
+
+        <div class="form-grid">
+          <input type="text" placeholder="Bedrooms">
+          <input type="text" placeholder="Bathrooms">
+          <input type="text" placeholder="Parking Spaces">
+          <input type="text" placeholder="Year Built">
+          <input type="text" placeholder="Lot Size">
+          <input type="text" placeholder="Square Footage">
+        </div>
+
+        <input type="file">
+        <input type="text" placeholder="Listing Price">
+
+        <button type="submit">Next</button>
+      </form>
+    </div>
   </main>
 
   <footer>
-    <small>© 2025 VillaVista Co.</small>
+    <p>2025 VillaVista Co.</p>
   </footer>
+
 </body>
 </html>
+
