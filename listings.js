@@ -15,10 +15,10 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
     const images = await imagesRes.json();
 
     // Merge listings with their images
-    const listingsWithImages = listings.map(listing => {
-      const match = images.find(img => img.listing_id === listing.id);
-      return { ...listing, image: match ? match.image : "images/placeholder.jpg" };
-    });
+const listingsWithImages = listings.map(listing => {
+  const match = images.find(img => img.id === listing.id);
+  return { ...listing, image: match ? match.url : "images/placeholder.jpg" };
+});
 
     // Clear container
     container.innerHTML = "";

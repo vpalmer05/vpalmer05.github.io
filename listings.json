@@ -1,52 +1,1397 @@
 [
-  {"id": 1, "price": "$375,113", "bedrooms": 4, "bathrooms": 2.5, "sqft": 1948, "address": "Ravenna, OH 44266"},
-  {"id": 2, "price": "$145,231", "bedrooms": 3, "bathrooms": 1, "sqft": 1450, "address": "Ravenna, OH 44266"},
-  {"id": 3, "price": "", "bedrooms": 0, "bathrooms": 0, "sqft": 0, "address": "Ravenna, OH 44266"},
-  {"id": 4, "price": "$173,486", "bedrooms": 3, "bathrooms": 1, "sqft": 1788, "address": "Ravenna, OH 44266"},
-  {"id": 5, "price": "$172,903", "bedrooms": 4, "bathrooms": 1.5, "sqft": 2288, "address": "Ravenna, OH 44266"},
-  {"id": 6, "price": "$252,482", "bedrooms": 3, "bathrooms": 1.5, "sqft": 1804, "address": "Ravenna, OH 44266"},
-  {"id": 7, "price": "$92,225", "bedrooms": 3, "bathrooms": 1.5, "sqft": 1403, "address": "Ravenna, OH 44266"},
-  {"id": 8, "price": "", "bedrooms": 2, "bathrooms": 2, "sqft": 1088, "address": "Ravenna, OH 44266"},
-  {"id": 9, "price": "$179,941", "bedrooms": 4, "bathrooms": 1.5, "sqft": 2254, "address": "Ravenna, OH 44266"},
-  {"id": 10, "price": "$211,337", "bedrooms": 3, "bathrooms": 1.5, "sqft": 1700, "address": "Ravenna, OH 44266"},
-  {"id": 11, "price": "$149,915", "bedrooms": 4, "bathrooms": 1, "sqft": 1152, "address": "Ravenna, OH 44266"},
-  {"id": 12, "price": "$130,673", "bedrooms": 2, "bathrooms": 1, "sqft": 1214, "address": "Ravenna, OH 44266"},
-  {"id": 13, "price": "$164,900", "bedrooms": 3, "bathrooms": 2, "sqft": 1056, "address": "Ravenna, OH 44266"},
-  {"id": 14, "price": "$138,433", "bedrooms": 2, "bathrooms": 1, "sqft": 780, "address": "Ravenna, OH 44266"},
-  {"id": 15, "price": "$118,892", "bedrooms": 2, "bathrooms": 1, "sqft": 700, "address": "Ravenna, OH 44266"},
-  {"id": 16, "price": "$153,520", "bedrooms": 3, "bathrooms": 1, "sqft": 864, "address": "Ravenna, OH 44266"},
-  {"id": 17, "price": "$65,299", "bedrooms": 0, "bathrooms": 0, "sqft": 0, "address": "Ravenna, OH 44266"},
-  {"id": 18, "price": "", "bedrooms": 0, "bathrooms": 0, "sqft": 0, "address": "Ravenna, OH 44266"},
-  {"id": 19, "price": "", "bedrooms": 0, "bathrooms": 0, "sqft": 0, "address": "Ravenna, OH 44266"},
-  {"id": 20, "price": "$109,447", "bedrooms": 4, "bathrooms": 1, "sqft": 1392, "address": "Ravenna, OH 44266"},
-  {"id": 21, "price": "$123,636", "bedrooms": 3, "bathrooms": 1, "sqft": 1330, "address": "Ravenna, OH 44266"},
-  {"id": 22, "price": "$119,000", "bedrooms": 2, "bathrooms": 1, "sqft": 960, "address": "Ravenna, OH 44266"},
-  {"id": 23, "price": "$375,113", "bedrooms": 4, "bathrooms": 2.5, "sqft": 1948, "address": "Ravenna, OH 44266"},
-  {"id": 24, "price": "$146,351", "bedrooms": 3, "bathrooms": 1, "sqft": 1082, "address": "Ravenna, OH 44266"},
-  {"id": 25, "price": "$124,186", "bedrooms": 2, "bathrooms": 1, "sqft": 960, "address": "Ravenna, OH 44266"},
-  {"id": 26, "price": "$202,444", "bedrooms": 3, "bathrooms": 2, "sqft": 1650, "address": "Ravenna, OH 44266"},
-  {"id": 27, "price": "$232,920", "bedrooms": 3, "bathrooms": 2, "sqft": 1391, "address": "Ravenna, OH 44266"},
-  {"id": 28, "price": "$179,625", "bedrooms": 3, "bathrooms": 1, "sqft": 1273, "address": "Ravenna, OH 44266"},
-  {"id": 29, "price": "$109,447", "bedrooms": 4, "bathrooms": 1, "sqft": 1392, "address": "Ravenna, OH 44266"},
-  {"id": 30, "price": "$153,970", "bedrooms": 3, "bathrooms": 1, "sqft": 1136, "address": "Ravenna, OH 44266"},
-  {"id": 31, "price": "$184,432", "bedrooms": 3, "bathrooms": 1.5, "sqft": 1292, "address": "Ravenna, OH 44266"},
-  {"id": 32, "price": "$165,031", "bedrooms": 3, "bathrooms": 1, "sqft": 1232, "address": "Ravenna, OH 44266"},
-  {"id": 33, "price": "$138,680", "bedrooms": 3, "bathrooms": 1, "sqft": 1440, "address": "Ravenna, OH 44266"},
-  {"id": 34, "price": "$229,877", "bedrooms": 3, "bathrooms": 1, "sqft": 2334, "address": "Ravenna, OH 44266"},
-  {"id": 35, "price": "$226,015", "bedrooms": 3, "bathrooms": 2, "sqft": 1812, "address": "Ravenna, OH 44266"},
-  {"id": 36, "price": "$70,151", "bedrooms": 3, "bathrooms": 1, "sqft": 0, "address": "Ravenna, OH 44266"},
-  {"id": 37, "price": "$90,041", "bedrooms": 3, "bathrooms": 2, "sqft": 1189, "address": "Ravenna, OH 44266"},
-  {"id": 38, "price": "$162,726", "bedrooms": 4, "bathrooms": 1, "sqft": 1626, "address": "Ravenna, OH 44266"},
-  {"id": 39, "price": "$109,447", "bedrooms": 4, "bathrooms": 1, "sqft": 1392, "address": "Ravenna, OH 44266"},
-  {"id": 40, "price": "$123,636", "bedrooms": 3, "bathrooms": 1, "sqft": 1330, "address": "Ravenna, OH 44266"},
-  {"id": 41, "price": "$119,000", "bedrooms": 2, "bathrooms": 1, "sqft": 960, "address": "Ravenna, OH 44266"},
-  {"id": 42, "price": "$153,520", "bedrooms": 3, "bathrooms": 1, "sqft": 864, "address": "Ravenna, OH 44266"},
-  {"id": 43, "price": "$65,299", "bedrooms": 0, "bathrooms": 0, "sqft": 0, "address": "Ravenna, OH 44266"},
-  {"id": 44, "price": "$71,505", "bedrooms": 3, "bathrooms": 1, "sqft": 1640, "address": "Ravenna, OH 44266"},
-  {"id": 45, "price": "$94,189", "bedrooms": 3, "bathrooms": 1, "sqft": 1027, "address": "Ravenna, OH 44266"},
-  {"id": 46, "price": "$313,236", "bedrooms": 3, "bathrooms": 3, "sqft": 1660, "address": "Ravenna, OH 44266"},
-  {"id": 47, "price": "$132,145", "bedrooms": 3, "bathrooms": 1, "sqft": 1300, "address": "Ravenna, OH 44266"},
-  {"id": 48, "price": "$422,984", "bedrooms": 5, "bathrooms": 3.5, "sqft": 2454, "address": "Kent, OH 44240"},
-  {"id": 49, "price": "$337,167", "bedrooms": 3, "bathrooms": 2.5, "sqft": 1492, "address": "Kent, OH 44240"},
-  {"id": 50, "price": "$259,261", "bedrooms": 3, "bathrooms": 2, "sqft": 1350, "address": "Kent, OH 44240"}
+  {
+    "id": 1,
+    "price": "$375,113",
+    "bedrooms": 4,
+    "bathrooms": 2.5,
+    "sqft": null,
+    "address": "Lovers Ln, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 2,
+    "price": "$145,231",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "E Highland Ave, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 3,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Timberview Dr, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 4,
+    "price": "$173,486",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Shadowlawn Dr, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 5,
+    "price": "$172,903",
+    "bedrooms": 4,
+    "bathrooms": 1.5,
+    "sqft": null,
+    "address": "N Prospect St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 6,
+    "price": "$252,482",
+    "bedrooms": 3,
+    "bathrooms": 1.5,
+    "sqft": null,
+    "address": "Robin Dr, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 7,
+    "price": "$92,225",
+    "bedrooms": 3,
+    "bathrooms": 1.5,
+    "sqft": null,
+    "address": "W Harris Ave, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 8,
+    "price": null,
+    "bedrooms": 2,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "Bryn Mawr St Unit K, Ravenna, OH, 44266",
+    "type": "Condo"
+  },
+  {
+    "id": 9,
+    "price": null,
+    "bedrooms": 2,
+    "bathrooms": 1.5,
+    "sqft": null,
+    "address": "Bryn Mawr St Unit K8, Ravenna, OH, 44266",
+    "type": "Condo"
+  },
+  {
+    "id": 10,
+    "price": "$179,941",
+    "bedrooms": 4,
+    "bathrooms": 1.5,
+    "sqft": null,
+    "address": "N Freedom St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 11,
+    "price": null,
+    "bedrooms": 2,
+    "bathrooms": 1.5,
+    "sqft": null,
+    "address": "Bryn Mawr St Unit K-8, Ravenna, OH, 44266",
+    "type": "Condo"
+  },
+  {
+    "id": 12,
+    "price": "$211,337",
+    "bedrooms": 3,
+    "bathrooms": 1.5,
+    "sqft": null,
+    "address": "State Route 59, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 13,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "State Route 5, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 14,
+    "price": "$149,915",
+    "bedrooms": 4,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Jerome Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 15,
+    "price": "$253,496",
+    "bedrooms": 4,
+    "bathrooms": 3.0,
+    "sqft": null,
+    "address": "Timber Run, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 16,
+    "price": "$130,673",
+    "bedrooms": 2,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Denny Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 17,
+    "price": null,
+    "bedrooms": 4,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "Genevieve St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 18,
+    "price": "$153,520",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Polly Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 19,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Cara Dr, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 20,
+    "price": "$191,523",
+    "bedrooms": 2,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "Bryn Mawr St, Ravenna, OH, 44266",
+    "type": "Condo"
+  },
+  {
+    "id": 21,
+    "price": "$65,299",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Sumner Rd, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 22,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Scenic Dr, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 23,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "E Main St Apt 4, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 24,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Bennington Pike, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 25,
+    "price": "$291,415",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Roberts Journey, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 26,
+    "price": "$164,900",
+    "bedrooms": 3,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "Ohio Ave, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 27,
+    "price": "$138,433",
+    "bedrooms": 2,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Menough Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 28,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Cleveland Rd Apt 4, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 29,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "1/2 Rock Spring Rd, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 30,
+    "price": "$202,444",
+    "bedrooms": 3,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "Brush Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 31,
+    "price": "$232,920",
+    "bedrooms": 3,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "Whipporwill Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 32,
+    "price": "$179,625",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Harvest Dr, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 33,
+    "price": "$234,132",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Beery Rd, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 34,
+    "price": "$291,893",
+    "bedrooms": 3,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "Halwick Dr, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 35,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Salem Trl S, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 36,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Bryn Mawr St Apt 3, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 37,
+    "price": "$118,892",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "N Walnut St, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 38,
+    "price": null,
+    "bedrooms": 2,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "3rd St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 39,
+    "price": "$174,900",
+    "bedrooms": 3,
+    "bathrooms": 3.0,
+    "sqft": null,
+    "address": "Washington St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 40,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Ivy Trl, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 41,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Page St # 2, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 42,
+    "price": "$145,270",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Rock Spring Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 43,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Timberview Dr, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 44,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "E Main St Apt 10c, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 45,
+    "price": "$84,183",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Lincoln St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 46,
+    "price": "$138,458",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Conant Ct, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 47,
+    "price": "$71,505",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Gill St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 48,
+    "price": "$94,189",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "W Maple Ln, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 49,
+    "price": "$313,236",
+    "bedrooms": 3,
+    "bathrooms": 3.0,
+    "sqft": null,
+    "address": "Hazelnut Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 50,
+    "price": "$149,681",
+    "bedrooms": 3,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "N Scranton St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 51,
+    "price": "$233,719",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Pine Hollow Dr, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 52,
+    "price": "$201,330",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Spring St, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 53,
+    "price": "$96,457",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Page St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 54,
+    "price": "$153,970",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Patricia Ave, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 55,
+    "price": "$184,432",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Marchinn Dr, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 56,
+    "price": "$165,031",
+    "bedrooms": 3,
+    "bathrooms": 1.5,
+    "sqft": null,
+    "address": "Madison St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 57,
+    "price": "$138,680",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Denny Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 58,
+    "price": "$229,877",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Brady Lake Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 59,
+    "price": "$226,015",
+    "bedrooms": 3,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "Leonard St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 60,
+    "price": "$107,514",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Minyoung Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 61,
+    "price": null,
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "S Prospect St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 62,
+    "price": "$300,800",
+    "bedrooms": 4,
+    "bathrooms": 3.0,
+    "sqft": null,
+    "address": "Susan Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 63,
+    "price": "$247,566",
+    "bedrooms": 3,
+    "bathrooms": 3.0,
+    "sqft": null,
+    "address": "Tallmadge Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 64,
+    "price": "$197,336",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Bryn Mawr St, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 65,
+    "price": "$135,799",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "King St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 66,
+    "price": "$58,410",
+    "bedrooms": 2,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "W Harris Ave, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 67,
+    "price": null,
+    "bedrooms": 2,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "Overview Cir # 5, Ravenna, OH, 44266",
+    "type": "Condo"
+  },
+  {
+    "id": 68,
+    "price": "$171,120",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Ohio Ave, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 69,
+    "price": "$296,010",
+    "bedrooms": 4,
+    "bathrooms": 3.0,
+    "sqft": null,
+    "address": "Halwick Dr, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 70,
+    "price": "$168,022",
+    "bedrooms": 4,
+    "bathrooms": 2.5,
+    "sqft": null,
+    "address": "Rootstown Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 71,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Rawson St # 1, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 72,
+    "price": "$148,363",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Herriff Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 73,
+    "price": "$263,289",
+    "bedrooms": 5,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "Mccormick Rd, Ravenna, OH, 44266",
+    "type": "Agricultural"
+  },
+  {
+    "id": 74,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "State Route 14, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 75,
+    "price": "$102,381",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Zeta St, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 76,
+    "price": "$132,145",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Myrtle St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 77,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Lovers Ln, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 78,
+    "price": "$146,351",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Eastland Ave, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 79,
+    "price": "$124,186",
+    "bedrooms": 2,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Beaver Rd, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 80,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Gooseberry Knl, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 81,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Elm St Apt 203, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 82,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "State Route 59 Lot B11, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 83,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Tart Cherry Ln, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 84,
+    "price": "$109,447",
+    "bedrooms": 4,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "N Diamond St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 85,
+    "price": "$123,636",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Cedar Ave, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 86,
+    "price": "$119,000",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "W Lake St, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 87,
+    "price": "$228,640",
+    "bedrooms": 6,
+    "bathrooms": 4.0,
+    "sqft": null,
+    "address": "Muzzy Rd, Ravenna, OH, 44266",
+    "type": "Multi-Family"
+  },
+  {
+    "id": 88,
+    "price": "$163,726",
+    "bedrooms": 4,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "State Route 88, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 89,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Ohio 14, Ravenna, OH, 44266",
+    "type": ""
+  },
+  {
+    "id": 90,
+    "price": "$145,075",
+    "bedrooms": 3,
+    "bathrooms": 1.5,
+    "sqft": null,
+    "address": "Lawrence St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 91,
+    "price": "$160,260",
+    "bedrooms": 3,
+    "bathrooms": 1.0,
+    "sqft": null,
+    "address": "Coolman Ave, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 92,
+    "price": "$163,246",
+    "bedrooms": 3,
+    "bathrooms": 1.5,
+    "sqft": null,
+    "address": "Park Ave, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 93,
+    "price": "$90,041",
+    "bedrooms": 3,
+    "bathrooms": 2.0,
+    "sqft": null,
+    "address": "S Prospect St, Ravenna, OH, 44266",
+    "type": "Single-Family"
+  },
+  {
+    "id": 94,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Barker Blvd, Apt D, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 95,
+    "price": "$1",
+    "bedrooms": 5,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "E Oak St, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 96,
+    "price": "$142,955",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Hanover Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 97,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Silver Meadows Blvd, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 98,
+    "price": "$304,703",
+    "bedrooms": 4,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Basswood Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 99,
+    "price": "$156,962",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Hanover Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 100,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "W Main St Apt A, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 101,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Waterford Pointe Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 102,
+    "price": "$146,478",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Arcadia Rd, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 103,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Huckleberry Ln, Unit E, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 104,
+    "price": "$191,967",
+    "bedrooms": 4,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Arcadia Rd, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 105,
+    "price": null,
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Aarons Way # 36-d, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 106,
+    "price": "$500,418",
+    "bedrooms": 4,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Windward Ln, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 107,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Spruce Ct, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 108,
+    "price": "$161,488",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Meloy Rd, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 109,
+    "price": "$180,503",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Wolcott Ave, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 110,
+    "price": "$343,276",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Willow Way, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 111,
+    "price": "$69,274",
+    "bedrooms": 2,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Laurel Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 112,
+    "price": "$545,107",
+    "bedrooms": 4,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Mogadore Rd, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 113,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Walters St, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 114,
+    "price": "$289,785",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Johnson Rd, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 115,
+    "price": "$189,384",
+    "bedrooms": 4,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Woodside Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 116,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "River St Apt B5, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 117,
+    "price": "$490,097",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Woods Trl, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 118,
+    "price": "$156,672",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Cherry St, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 119,
+    "price": "$70,151",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "W Elm St, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 120,
+    "price": "$176,059",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Morley Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 121,
+    "price": "$87,089",
+    "bedrooms": 1,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Carthage Ave, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 122,
+    "price": "$135,097",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "W Main St, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 123,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Cascades Blvd Apt 102, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 124,
+    "price": "$176,939",
+    "bedrooms": 4,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Denise Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 125,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Rhodes Rd Apt 113, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 126,
+    "price": "$137,945",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Bowman Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 127,
+    "price": "$207,857",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Morris Rd, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 128,
+    "price": null,
+    "bedrooms": 6,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "University Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 129,
+    "price": "$191,152",
+    "bedrooms": 1,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Vine St, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 130,
+    "price": "$141,516",
+    "bedrooms": 5,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Carthage Ave, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 131,
+    "price": "$265,857",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Knoll Rd, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 132,
+    "price": "$259,276",
+    "bedrooms": 4,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Spaulding Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 133,
+    "price": "$423,830",
+    "bedrooms": 4,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Windward Ln, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 134,
+    "price": "$153,725",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Cherrywood Rd, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 135,
+    "price": "$62,699",
+    "bedrooms": 2,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Laurel Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 136,
+    "price": "$222,142",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Garth Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 137,
+    "price": "$67,963",
+    "bedrooms": 2,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "W Main St, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 138,
+    "price": "$362,841",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Lynn Rd, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 139,
+    "price": "$363,175",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Admore Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 140,
+    "price": "$177,032",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Valleyview Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 141,
+    "price": "$173,897",
+    "bedrooms": 2,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Hudson Rd, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 142,
+    "price": "$259,261",
+    "bedrooms": 4,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "State Route 43, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 143,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "State Route 59 Lot 28, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 144,
+    "price": "$274,985",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Chapman Dr, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 145,
+    "price": "$314,838",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Catlin Ct, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 146,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Carlisle Ct Apt 302, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 147,
+    "price": "$173,993",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Westminster Ln, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 148,
+    "price": "$198,770",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Picadilly Ct, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 149,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Tallmadge Rd # 61, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 150,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Barker Blvd, Apt E, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 151,
+    "price": "$152,921",
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Franklin Ave, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 152,
+    "price": null,
+    "bedrooms": null,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Huckleberry Ln, Unit A, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 153,
+    "price": "$422,984",
+    "bedrooms": 5,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Brower Tree Ln, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 154,
+    "price": "$337,167",
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Nature Wood Cir, Kent, OH",
+    "type": null
+  },
+  {
+    "id": 155,
+    "price": null,
+    "bedrooms": 3,
+    "bathrooms": null,
+    "sqft": null,
+    "address": "Brimfield Dr, Kent, OH",
+    "type": null
+  }
 ]
