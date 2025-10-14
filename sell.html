@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Selling</title>
-  <link rel="stylesheet" href="vistastyles.css">
+  <link rel="stylesheet" href="vistastyles.css" />
 </head>
 
 <body class="vv-client">
-
   <header class="client-header">
-    <h1>Selling</h1>
+    <h1 class="client-title">Selling</h1>
     <nav class="client-nav">
       <a href="clientportal.html">Home</a>
       <a href="messages.html">Messages</a>
@@ -17,42 +16,100 @@
     </nav>
   </header>
 
+  <!--Non-Functional Selling Form-->
   <main class="sell-main">
-    <h2>Start listing your property</h2>
+    <h2>List Your Property:</h2>
 
-    <div class="sell-tabs">
-      <button class="active">Property Information</button>
-      <button>Seller Details</button>
-      <button>Choose your Realtor</button>
-    </div>
+    <!--Left-->
+    <section class="sell-section">
+      <div class="sell-illustration">
+        <img src="sellicon.jpg" alt="Selling illustration" />
+      </div>
 
-    <div class="sell-section">
-      <img src="sellicon.jpg">
+    <!--Right-->
+      <form id="sellForm" novalidate>
+        <h3 class="sell-section-title">Property Information</h3>
 
-      <form>
-        <input type="text" placeholder="Property Address">
+        <label class="field">
+          <span>Property Address</span>
+          <input type="text" placeholder="123 Sample St, City, ST 00000" required />
+        </label>
 
-        <div class="form-grid">
-          <input type="text" placeholder="Bedrooms">
-          <input type="text" placeholder="Bathrooms">
-          <input type="text" placeholder="Parking Spaces">
-          <input type="text" placeholder="Year Built">
-          <input type="text" placeholder="Lot Size">
-          <input type="text" placeholder="Square Footage">
+        <div class="form-grid two">
+          <label class="field">
+            <span>Bedrooms</span>
+            <input type="number" min="0" placeholder="3" />
+          </label>
+          <label class="field">
+            <span>Bathrooms</span>
+            <input type="number" min="0" step="0.5" placeholder="2" />
+          </label>
         </div>
 
-        <input type="file">
-        <input type="text" placeholder="Listing Price">
+        <div class="form-grid two">
+          <label class="field">
+            <span>Square Footage</span>
+            <input type="number" min="0" placeholder="1850" />
+          </label>
+          <label class="field">
+            <span>Listing Price ($)</span>
+            <input type="number" min="0" placeholder="350000" />
+          </label>
+        </div>
 
-        <button type="submit">Next</button>
+        <label class="field">
+          <span>Upload Photos</span>
+          <input type="file" multiple />
+        </label>
+
+        <h3 class="sell-section-title">Seller Details</h3>
+
+        <div class="form-grid two">
+          <label class="field">
+            <span>First Name</span>
+            <input type="text" placeholder="Jane" required />
+          </label>
+          <label class="field">
+            <span>Last Name</span>
+            <input type="text" placeholder="Doe" required />
+          </label>
+        </div>
+
+        <div class="form-grid two">
+          <label class="field">
+            <span>Email</span>
+            <input type="email" placeholder="jane@example.com" required />
+          </label>
+          <label class="field">
+            <span>Phone</span>
+            <input type="tel" placeholder="(555) 123-4567" required />
+          </label>
+        </div>
+
+        <h3 class="sell-section-title">Choose Your Realtor</h3>
+
+        <label class="field">
+          <span>Realtor</span>
+          <select>
+            <option>Alex Carter</option>
+            <option>Maria Gomez</option>
+            <option>Sam Patel</option>
+          </select>
+        </label>
+
+        <div class="sell-actions">
+          <button type="submit" class="btn btn-accent">Submit</button>
+        </div>
       </form>
-    </div>
+    </section>
   </main>
 
-  <footer>
-    <p>2025 VillaVista Co.</p>
+  <footer class="client-footer">
+    <small>© 2025 VillaVista Co.</small>
   </footer>
 
+  <script src="sell.js"></script>
 </body>
 </html>
+
 
