@@ -1,27 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="vistastyles.css">
 <head>
   <meta charset="UTF-8" />
-  <title>Messages</title>
+  <title>Messages • VillaVista</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="vistastyles.css" />
 </head>
-<body>
-  <header>
-    <h1>Messages</h1>
-    <nav>
-      <ul>
-      <li><a href="index.html">Log Out</a></li>
-      <li><a href="clientportal.html">Home</a></li>
-      </ul>
+<body class="vv-client">
+  
+  <header class="client-header">
+    <h1 class="client-title">Message Your Realtor</h1>
+    <nav class="client-nav">
+      <a href="clientportal.html">Home</a>
+      <a href="client-profile.html">Profile</a>
+      <a href="logout.html">Log Out</a>
     </nav>
   </header>
 
-  <main>
-    <p>Placeholder for messages</p>
+  <main class="messages-main">
+    <div class="chat-wrap">
+
+      <div class="row right">
+        <div class="bubble bubble-me">
+          Hi, I saw the listing for the 3-bedroom house on Lakeview Drive and I'm interested.
+          Could you tell me if it's still available, and whether there are any upcoming open houses scheduled?
+        </div>
+      </div>
+
+      <div class="row left">
+        <img class="avatar" src="avatar-realtor.jpg" alt="Realtor avatar" />
+        <div class="bubble bubble-agent">
+          Hi Kyle, thank you for reaching out! Yes, the property on Lakeview Drive is still available.
+          There’s no open house scheduled at the moment, but I’d be happy to set up a private showing for you.
+          Do you have any preferred times this week?
+        </div>
+      </div>
+
+    </div>
+
+    <form class="chat-input" action="#" method="post">
+      <input type="text" aria-label="Type your message" placeholder="Message..." />
+      <button type="submit" class="btn-send">Send</button>
+    </form>
   </main>
 
-  <footer>
-    <small>© 2025 VillaVista Co.</small>
-  </footer>
+  <footer class="client-footer">© 2025 VillaVista Co.</footer>
 </body>
 </html>

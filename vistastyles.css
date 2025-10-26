@@ -319,7 +319,6 @@ body.vv-client {
 /*
    SELL
 */
-/* --- Sell (two-column with left image, short single form) --- */
 .sell-main {
   padding: 2rem;
   text-align: center;
@@ -402,7 +401,6 @@ body.vv-client {
   justify-content: flex-end;
 }
 
-/* stack on small screens */
 @media (max-width: 800px) {
   .sell-section {
     grid-template-columns: 1fr;
@@ -414,4 +412,218 @@ body.vv-client {
   .sell-illustration img {
     height: 200px;
   }
+}
+
+/* 
+CLIENT PROFILE
+*/
+.profile-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profile-menu {
+  width: 220px;
+  background: var(--navy);
+  color: var(--cream);
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.profile-menu .avatar {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.profile-menu p {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.profile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-menu li {
+  margin-bottom: 8px;
+}
+
+.profile-menu a {
+  color: var(--cream);
+  text-decoration: none;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.profile-menu a:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.profile-form {
+  flex: 1;
+  background: var(--cream);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--ink);
+}
+
+.profile-form h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 18px 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.form-field input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.profile-form button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: var(--gold);
+  color: var(--navy);
+  cursor: pointer;
+}
+
+.profile-form button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .profile-container { flex-direction: column; }
+  .profile-menu { width: 100%; }
+  .form-grid { grid-template-columns: 1fr; }
+}
+
+/* 
+  MESSAGES
+*/
+.messages-main {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  height: calc(100vh - 120px);
+  padding: 20px;
+  gap: 16px;
+}
+
+.chat-wrap {
+  overflow: auto;
+  padding: 10px 6px;
+  display: grid;
+  gap: 14px;
+}
+
+.row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.row.left { justify-content: flex-start; }
+.row.right { justify-content: flex-end; }
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.bubble {
+  max-width: min(65ch, 70%);
+  padding: 12px 14px;
+  border-radius: 18px;
+  line-height: 1.5;
+  font-size: 14.5px;
+}
+
+.bubble-agent {
+  background: #ffffff;
+  color: var(--ink);
+  border: 1px solid rgba(0,0,0,.08);
+  border-top-left-radius: 8px;
+}
+
+.bubble-me {
+  background: var(--navy);
+  color: #fff;
+  border-top-right-radius: 8px;
+}
+
+.chat-input {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  background: rgba(255,255,255,.75);
+  border-radius: 12px;
+  backdrop-filter: blur(2px);
+}
+
+.chat-input input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e2dfd7;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+  color: var(--ink);
+}
+
+.chat-input input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.btn-send {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: var(--gold);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-send:hover { background: var(--gold-700); }
+
+@media (max-width: 800px) {
+  .bubble { max-width: 80%; }
+  .messages-main { height: calc(100vh - 110px); }
 }

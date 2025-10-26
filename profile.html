@@ -1,27 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="vistastyles.css">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Profile</title>
+  <link rel="stylesheet" href="vistastyles.css">
 </head>
-<body>
-  <header>
+
+<body class="vv-client">
+
+  <header class="client-header">
     <h1>Profile</h1>
-    <nav>
-      <ul>
-      <li><a href="index.html">Log Out</a></li>
-      <li><a href="clientportal.html">Home</a></li>
-      </ul>
+    <nav class="client-nav">
+      <a href="clientportal.html">Home</a>
+      <a href="logout.html">Log Out</a>
     </nav>
   </header>
 
-  <main>
-    <p>Placeholder for User Profile</p>
+  <main class="profile-container">
+    <!-- Left Side -->
+    <aside class="profile-menu">
+      <div class="avatar">👤</div>
+      <p>Welcome back, Client!</p>
+      <ul>
+        <li><a href="profile.html">Personal Information</a></li>
+        <li><a href="listings.html">View Listings</a></li>
+        <li><a href="favorites.html">View Favorites</a></li>
+        <li><a href="messages.html">Contact my Realtor</a></li>
+        <li><a href="sell.html">Sell my Property</a></li>
+      </ul>
+    </aside>
+
+    <!-- Right Side -->
+    <section class="profile-form">
+      <h2>Edit Your Information</h2>
+
+      <form action="#" method="post" novalidate>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="name">Full Name</label>
+            <input id="name" type="text">
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" type="email">
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel">
+          </div>
+
+          <div class="form-field">
+            <label for="contact">Preferred Contact Method</label>
+            <input id="contact" type="text">
+          </div>
+
+          <div class="form-field">
+            <label for="city">City</label>
+            <input id="city" type="text">
+          </div>
+
+          <div class="form-field">
+            <label for="state">State</label>
+            <input id="state" type="text">
+          </div>
+
+          <div class="form-field">
+            <label for="zip">ZIP</label>
+            <input id="zip" type="text">
+          </div>
+
+        <div class="form-actions">
+          <button type="submit">Save Changes</button>
+        </div>
+      </form>
+    </section>
   </main>
 
-  <footer>
-    <small>© 2025 VillaVista Co.</small>
-  </footer>
+  <footer class="client-footer">© 2025 VillaVista Co.</footer>
 </body>
 </html>
