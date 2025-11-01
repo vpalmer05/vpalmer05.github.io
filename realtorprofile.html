@@ -1,27 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="vistastyles.css">
 <head>
-  <meta charset="UTF-8" />
-  <title>Profile</title>
+  <meta charset="UTF-8">
+  <title>Realtor Profile</title>
+  <link rel="stylesheet" href="vistastyles.css">
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.tab-section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(sectionId).style.display = 'block';
+    }
+    window.onload = () => showSection('personal-info');
+  </script>
 </head>
-<body>
-  <header>
-    <h1>Profile</h1>
-    <nav>
-      <ul>
-      <li><a href="index.html">Log Out</a></li>
-      <li><a href="realtorportal.html">Home</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <p>Placeholder for realtor profile</p>
+<body class="vv-realtor">
+
+  <main class="profile-container">
+    <!-- SIDEBAR -->
+    <aside class="profile-menu">
+      <div class="top-section">
+        <div class="avatar">🏡</div>
+        <p>Welcome back, Realtor!</p>
+        <div class="rating">★★★★★</div>
+        <div class="role">VillaVista Licensed Realtor</div>
+
+        <ul>
+          <li><a href="#" onclick="showSection('personal-info')">Personal Information</a></li>
+          <li><a href="#" onclick="showSection('work-preferences')">Work Preferences</a></li>
+          <li><a href="#" onclick="showSection('client-appreciation')">Client Appreciation</a></li>
+        </ul>
+      </div>
+
+      <div class="bottom-links">
+        <a href="realtorhome.html">Home</a>
+        <a href="logout.html">Log Out</a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <section class="profile-form">
+
+      <!-- PERSONAL INFORMATION -->
+      <div id="personal-info" class="tab-section">
+        <h2>Personal Information</h2>
+        <form>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input id="name" type="text">
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" type="email">
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel">
+            </div>
+
+            <div class="form-field">
+              <label for="license">License Number</label>
+              <input id="license" type="text">
+            </div>
+
+            <div class="form-field">
+              <label for="office">Office Location</label>
+              <input id="office" type="text">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit">Save Changes</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- WORK PREFERENCES -->
+      <div id="work-preferences" class="tab-section" style="display:none;">
+        <h2>Work Preferences</h2>
+        <form>
+          <div class="form-grid two">
+            <div class="form-field">
+              <label for="preferred-service-area">Preferred Service Area</label>
+              <select id="preferred-service-area">
+                <option selected disabled>Select an area</option>
+                <option>Kent</option>
+                <option>Stow</option>
+                <option>Hudson</option>
+                <option>Akron</option>
+                <option>Cuyahoga Falls</option>
+                <option>Twinsburg</option>
+                <option>Ravenna</option>
+                <option>Streetsboro</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="property-type-focus">Property Type Focus</label>
+              <select id="property-type-focus">
+                <option selected disabled>Select property type</option>
+                <option>Apartment</option>
+                <option>Townhouse</option>
+                <option>Multi-Family</option>
+                <option>House</option>
+                <option>Condo</option>
+                <option>Lots & Land</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="availability">Availability</label>
+              <select id="availability">
+                <option>Monday–Friday</option>
+                <option>Weekends Only</option>
+                <option>Flexible Schedule</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="max-clients">Max Client Load</label>
+              <input id="max-clients" type="number" min="1" max="50">
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit">Save Preferences</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- CLIENT APPRECIATION -->
+      <div id="client-appreciation" class="tab-section" style="display:none;">
+        <h2>Client Appreciation</h2>
+        <form>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="gift-type">Gift Type</label>
+              <input id="gift-type" type="text" placeholder="e.g., Flowers, Gift Card">
+            </div>
+
+            <div class="form-field">
+              <label for="gift-cost">Estimated Cost ($)</label>
+              <input id="gift-cost" type="number" min="0">
+            </div>
+
+            <div class="form-field">
+              <label for="gift-notes">Notes</label>
+              <input id="gift-notes" type="text" placeholder="Add details for this request">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit">Submit Gift Request</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
   </main>
 
-  <footer>
-    <small>© 2025 VillaVista Co.</small>
-  </footer>
+
 </body>
 </html>

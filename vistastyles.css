@@ -627,3 +627,114 @@ CLIENT PROFILE
   .bubble { max-width: 80%; }
   .messages-main { height: calc(100vh - 110px); }
 }
+
+
+
+
+/* REALTOR PROFILE  */
+body.vv-realtor {
+  background-color: #171D2E; /* navy background */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container layout */
+body.vv-realtor .profile-container {
+  display: flex;
+  min-height: 100vh;;
+  padding: 0;
+}
+
+/* Sidebar */
+body.vv-realtor .profile-menu {
+  background: #afa89e; /* beige sidebar */
+  color: #fff;
+  width: 320px;
+  padding: 2rem 1.5rem;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body.vv-realtor .profile-menu .avatar {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 70px;
+  font-size: 32px;
+  margin: 0 auto 1rem;
+}
+
+body.vv-realtor .rating {
+  text-align: center;
+  font-size: 20px;
+  color: #73643F; /* gold stars */
+  margin: 5px 0;
+}
+
+body.vv-realtor .role {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Sidebar links */
+body.vv-realtor .profile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+body.vv-realtor .profile-menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+body.vv-realtor .profile-menu a:hover,
+body.vv-realtor .profile-menu a.active {
+  background: #171D2E;
+  color: #fff;
+}
+
+/* Bottom sidebar links */
+body.vv-realtor .bottom-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+body.vv-realtor .bottom-links a {
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+body.vv-realtor .bottom-links a:hover {
+  background: #171D2E;
+  color: #fff;
+}
+
+/* Main section */
+body.vv-realtor .profile-form {
+  flex: 1;
+  background: #171D2E;
+  color: #fff;
+  padding: 3rem;
+}
+
+body.vv-realtor .profile-form h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+
+}
