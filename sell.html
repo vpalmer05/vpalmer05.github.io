@@ -27,39 +27,39 @@
       </div>
 
     <!--Right-->
-      <form id="sellForm" novalidate>
+      <form id="sellForm" novalidate netlify>
         <h3 class="sell-section-title">Property Information</h3>
 
         <label class="field">
           <span>Property Address</span>
-          <input type="text" placeholder="123 Sample St, City, ST 00000" required />
+          <input name="address" type="text" placeholder="123 Sample St, City, ST 00000" required />
         </label>
 
         <div class="form-grid two">
           <label class="field">
             <span>Bedrooms</span>
-            <input type="number" min="0" placeholder="3" />
+            <input name="bedrooms" type="number" min="0" placeholder="3" />
           </label>
           <label class="field">
             <span>Bathrooms</span>
-            <input type="number" min="0" step="0.5" placeholder="2" />
+            <input name="bathrooms" type="number" min="0" step="0.5" placeholder="2" />
           </label>
         </div>
 
         <div class="form-grid two">
           <label class="field">
             <span>Square Footage</span>
-            <input type="number" min="0" placeholder="1850" />
+            <input name="sqft" type="number" min="0" placeholder="1850" />
           </label>
           <label class="field">
             <span>Listing Price ($)</span>
-            <input type="number" min="0" placeholder="350000" />
+            <input name="price" type="number" min="0" placeholder="350000" />
           </label>
         </div>
 
         <label class="field">
           <span>Upload Photos</span>
-          <input type="file" multiple />
+          <input name="photos" type="file" multiple />
         </label>
 
         <h3 class="sell-section-title">Seller Details</h3>
@@ -67,22 +67,22 @@
         <div class="form-grid two">
           <label class="field">
             <span>First Name</span>
-            <input type="text" placeholder="Jane" required />
+            <input name="firstName" type="text" placeholder="Jane" required />
           </label>
           <label class="field">
             <span>Last Name</span>
-            <input type="text" placeholder="Doe" required />
+            <input name="lastName" type="text" placeholder="Doe" required />
           </label>
         </div>
 
         <div class="form-grid two">
           <label class="field">
             <span>Email</span>
-            <input type="email" placeholder="jane@example.com" required />
+            <input name="email" type="email" placeholder="jane@example.com" required />
           </label>
           <label class="field">
             <span>Phone</span>
-            <input type="tel" placeholder="(555) 123-4567" required />
+            <input name="phone" type="tel" placeholder="(555) 123-4567" required />
           </label>
         </div>
 
@@ -90,7 +90,7 @@
 
         <label class="field">
           <span>Realtor</span>
-          <select>
+          <select name="realtor">
             <option>Alex Carter</option>
             <option>Maria Gomez</option>
             <option>Sam Patel</option>
