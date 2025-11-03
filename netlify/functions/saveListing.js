@@ -1,6 +1,3 @@
-// netlify/functions/saveListing.js
-import fetch from "node-fetch";
-
 export async function handler(event) {
   // Allow preflight for CORS
   if (event.httpMethod === "OPTIONS") {
