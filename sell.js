@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       // Replace with your Netlify site URL and function name
-      const endpoint = "https://monumental-lamington-73e706.netlify.app/netlify/functions/saveListing";
+      const endpoint = "https://monumental-lamington-73e706.netlify.app/.netlify/functions/saveListing";
 
       const res = await fetch(endpoint, {
         method: "POST",
