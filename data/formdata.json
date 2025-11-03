@@ -18,5 +18,23 @@
     "images": [
       null
     ]
+  },
+  {
+    "id": 1762209027152,
+    "price": null,
+    "bedrooms": 0,
+    "bathrooms": 0,
+    "sqft": 0,
+    "address": null,
+    "type": null,
+    "seller": {
+      "firstName": null,
+      "lastName": null,
+      "email": null,
+      "phone": null
+    },
+    "realtor": "Alex Carter",
+    "created_at": "2025-11-03T22:30:27.152Z",
+    "images": []
   }
 ]
