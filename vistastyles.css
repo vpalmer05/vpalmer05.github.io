@@ -787,3 +787,164 @@ body.vv-realtor .profile-form button {
   font-weight: 500;
   padding: 12px 28px;
 }
+
+
+/* ============================
+   REALTOR MESSAGES PAGE*/
+   body.vv-realtor .messages-header {
+    background: #171D2E;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2.5rem;
+    border-bottom: 1px solid #73643F;
+  }
+  
+  body.vv-realtor .messages-header h1 {
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  body.vv-realtor .messages-header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  body.vv-realtor .messages-header nav a:hover {
+    color: #afa89e;
+  }
+  
+  /* MAIN LAYOUT */
+  body.vv-realtor .messages-container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    height: calc(100vh - 80px);
+    background: #171D2E;
+  }
+  
+  /* SIDEBAR */
+  body.vv-realtor .chat-sidebar {
+    background: #111624;
+    border-right: 1px solid #73643F;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  
+  body.vv-realtor .chat-sidebar .search-bar {
+    margin: 1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: none;
+    width: calc(100% - 2rem);
+    background: #fff;
+    color: #171D2E;
+  }
+  
+  body.vv-realtor .chat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+  }
+  
+  body.vv-realtor .chat-list li {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+  }
+  
+  body.vv-realtor .chat-list li.active {
+    background: #afa89e;
+    color: #171D2E;
+  }
+  
+  body.vv-realtor .chat-list .name {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  body.vv-realtor .chat-list .preview {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+  
+  /* CHAT AREA */
+  body.vv-realtor .chat-area {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    color: #fff;
+  }
+  
+  body.vv-realtor .chat-header {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  body.vv-realtor .chat-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* CHAT BUBBLES */
+  body.vv-realtor .bubble {
+    max-width: 65%;
+    padding: 1rem 1.2rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  body.vv-realtor .bubble.left {
+    background: #fff;
+    color: #171D2E;
+    align-self: flex-start;
+  }
+  
+  body.vv-realtor .bubble.right {
+    background: #afa89e;
+    color: #fff;
+    align-self: flex-end;
+  }
+  
+  /* INPUT AREA */
+  body.vv-realtor .chat-input {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    position: sticky; 
+    bottom: 0;
+   margin-top: 1rem; 
+  }
+  
+  body.vv-realtor .chat-input input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  body.vv-realtor .chat-input button {
+    background: #afa89e;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 1.5rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+  }
+  
+  body.vv-realtor .chat-input button:hover {
+    opacity: 0.9;
+  }

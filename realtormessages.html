@@ -1,27 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="vistastyles.css">
 <head>
   <meta charset="UTF-8" />
-  <title>Messages</title>
+  <title>Messages • VillaVista Realtor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="vistastyles.css" />
 </head>
-<body>
-  <header>
+
+<body class="vv-realtor">
+  <header class="messages-header">
     <h1>Messages</h1>
     <nav>
-      <ul>
-      <li><a href="index.html">Log Out</a></li>
-      <li><a href="realtorportal.html">Home</a></li>
-      </ul>
+      <a href="realtorportal.html">Home</a>
+      <a href="realtorprofile.html">Profile</a>
+      <a href="index.html">Log Out</a>
     </nav>
-  </header>
+  </header> 
 
-  <main>
-    <p>Placeholder for realtor messenges</p>
+  <main class="messages-container">
+    <!-- SIDEBAR -->
+    <aside class="chat-sidebar">
+      <input type="text" class="search-bar" placeholder="🔍 search..." />
+
+      <ul class="chat-list">
+        <li class="active">
+          <div class="name">Kyle Smith</div>
+          <div class="preview">Are you available for a call tomorrow? I have some que...</div>
+        </li>
+        <li>
+          <div class="name">Eric Johnson</div>
+          <div class="preview">Hi, I saw the listing for 123 Oakwood Drive. Is it still a...</div>
+        </li>
+        <li>
+          <div class="name">Sarah Madison</div>
+          <div class="preview">Thanks for the tour today! I'd like to make an offer on...</div>
+        </li>
+        <li>
+          <div class="name">Betty Williams</div>
+          <div class="preview">Good afternoon! I noticed the listing on Pinecrest Driv...</div>
+        </li>
+        <li>
+          <div class="name">John Adams</div>
+          <div class="preview">Absolutely! I'd be happy to walk you through it. Are y...</div>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- CHAT AREA -->
+    <section class="chat-area">
+      <div class="chat-header">Kyle Smith</div>
+
+      <div class="chat-content">
+        <div class="bubble left">
+          Hi, I saw the listing for the 3-bedroom house on Lakeview Drive and I’m interested. 
+          Could you tell me if it’s still available, and also whether there are any upcoming open houses scheduled?
+        </div>
+
+        <div class="bubble right beige">
+          Hi Kyle, thank you for reaching out! Yes, the property on Lakeview Drive is still available. 
+          There’s no open house scheduled at the moment, but I’d be happy to set up a private showing for you. 
+          Do you have any preferred times this week?
+        </div>
+
+        <div class="bubble left">
+          That sounds great. I’m free after 4 pm during the weekdays.
+        </div>
+
+        <div class="bubble left">
+          Are you available for a call tomorrow? I have some questions I’d like to ask before scheduling a showing.
+        </div>
+      </div>
+
+      <form class="chat-input" action="#" method="post">
+        <input type="text" placeholder="Message..." />
+        <button type="submit">Send</button>
+      </form>
+    </section>
   </main>
-
-  <footer>
-    <small>© 2025 VillaVista Co.</small>
-  </footer>
 </body>
 </html>
