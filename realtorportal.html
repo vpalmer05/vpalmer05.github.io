@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="vistastyles.css">
 <head>
   <meta charset="UTF-8" />
-  <title>Realtor Portal</title>
+  <title>Realtor Home</title>
+  <link rel="stylesheet" href="vistastyles.css">
 </head>
-<body>
-  <header>
+<body class="realtor-home">
+  <header class="header">
     <h1>Realtor Home</h1>
-    <nav>
+    <nav class="topnav">
+      <a href="realtorprofile.html">Profile</a>
+      <a href="realtormessages.html">Messages</a>
       <a href="index.html">Log Out</a>
     </nav>
   </header>
 
-  <main>
-    <nav aria-label="Primary">
-      <ul>
-        <li><a href="managelistings.html">Manage Listings</a></li>
-        <li><a href="appointments.html">Appointments</a></li>
-        <li><a href="realtormessages.html">Messages</a></li>
-        <li><a href="realtorprofile.html">Profile</a></li>
-      </ul>
-    </nav>
+  <main class="realtor-main">
+    <section class="card-grid">
+
+      <a href="managelistings.html" class="card">
+        <img src="managelistings.webp" alt="Manage Listings" class="card-image" />
+        <div class="card-title">Manage Listings</div>
+      </a>
+
+      <a href="appointments.html" class="card">
+        <img src="appointments.jpg" alt="Appointments" class="card-image" />
+        <div class="card-title">Appointments</div>
+      </a>
+
+    </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <small>© 2025 VillaVista Co.</small>
   </footer>
 </body>
 </html>
+
