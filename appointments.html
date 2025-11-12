@@ -72,6 +72,12 @@ nav a:hover { text-decoration: underline; }
 .appointment span { font-weight: bold; display: block; }
 .appointment p { margin: 2px 0 0; font-size: 0.9em; color: #d0d8ff; }
 
+/* --- NEW: Visual indicator for overlapping appointments --- */
+.appointment.overlapping {
+  border: 2px solid #ff7676;
+  box-shadow: 0 0 8px rgba(255, 100, 100, 0.8);
+}
+
 .add-btn, #prevWeek, #nextWeek {
   background-color: #3E4A8A;
   color: white;
@@ -168,7 +174,7 @@ footer { text-align:center; padding:10px; background:#141B34; border-top:1px sol
 <!-- Add Appointment Modal -->
 <div id="appointmentModal" class="modal">
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <span class="close" id="addClose">&times;</span>
     <h3>Add New Appointment</h3>
     <form id="appointmentForm">
       <label for="startTimeInput">Start Time:</label>
@@ -191,7 +197,7 @@ footer { text-align:center; padding:10px; background:#141B34; border-top:1px sol
 <!-- Edit/Delete Modal -->
 <div id="editModal" class="modal">
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <span class="close" id="editClose">&times;</span>
     <h3>Edit Appointment</h3>
     <form id="editForm">
       <label>Start Time:</label>
@@ -223,7 +229,7 @@ let currentWeekStart = getStartOfWeek(new Date());
 function getStartOfWeek(date) {
   const d = new Date(date);
   const day = d.getDay();
-  const diff = d.getDate() - day + (day===0?-6:1);
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1); // Monday as start
   return new Date(d.setDate(diff));
 }
 
@@ -233,7 +239,7 @@ function updateWeekLabel() {
   const options = { month:"numeric", day:"numeric", year:"2-digit" };
   const start = currentWeekStart;
   const end = new Date(start);
-  end.setDate(start.getDate()+6);
+  end.setDate(start.getDate() + 6);
   weekLabel.innerText = `Week of ${start.toLocaleDateString("en-US", options)} - ${end.toLocaleDateString("en-US", options)}`;
 }
 
@@ -245,7 +251,7 @@ function renderAppointmentsForWeek() {
   const days = document.querySelectorAll(".day");
   const dayNames = ["Monday","Tuesday","Wednesday","Thursday","Friday"];
 
-  days.forEach((dayCol,i)=>{
+  days.forEach((dayCol,i) => {
     const container = dayCol.querySelector(".appointment-container");
     container.innerHTML = ""; // Clear old appointments
 
@@ -256,11 +262,50 @@ function renderAppointmentsForWeek() {
     dayCol.querySelector("h3").innerText = `${dayNames[i]} ${dateStr}`;
     const dayStr = dayDate.toISOString().split("T")[0];
 
-    if(appointmentsData[dayStr]) {
+    if (appointmentsData[dayStr]) {
       const appts = appointmentsData[dayStr];
-      // Sort by start time
-      appts.sort((a,b)=>a.startTime.localeCompare(b.startTime));
-      appts.forEach((appt,index)=>{
+      appts.sort((a,b) => a.startTime.localeCompare(b.startTime));
+
+      // overlap check helper
+      function overlaps(a, b) {
+        const [aH, aM] = a.startTime.split(":").map(Number);
+        const [aEH, aEM] = a.endTime.split(":").map(Number);
+        const [bH, bM] = b.startTime.split(":").map(Number);
+        const [bEH, bEM] = b.endTime.split(":").map(Number);
+        const startA = aH * 60 + aM;
+        const endA = aEH * 60 + aEM;
+        const startB = bH * 60 + bM;
+        const endB = bEH * 60 + bEM;
+        return startA < endB && endA > startB;
+      }
+
+      // For proper stacking of overlapping groups, we'll compute for each appt how many earlier overlapping "columns" are occupied.
+      const columns = []; // array of arrays representing columns of non-overlapping appts
+
+      appts.forEach((appt, index) => {
+        // Find a column where this appt does not overlap the last appt in that column
+        let colIndex = -1;
+        for (let c = 0; c < columns.length; c++) {
+          const lastInCol = columns[c][columns[c].length - 1];
+          if (!overlaps(appt, lastInCol)) {
+            colIndex = c;
+            break;
+          }
+        }
+        if (colIndex === -1) {
+          columns.push([appt]);
+          colIndex = columns.length - 1;
+        } else {
+          columns[colIndex].push(appt);
+        }
+        // store the computed column index on the appointment for rendering (temporary)
+        appt._colIndex = colIndex;
+      });
+
+      // total columns for this day
+      const totalCols = columns.length;
+
+      appts.forEach((appt, index) => {
         const newAppt = document.createElement("div");
         newAppt.classList.add("appointment");
         newAppt.innerHTML = `
@@ -268,27 +313,40 @@ function renderAppointmentsForWeek() {
           <p>${appt.address}</p>
           <p style="font-size:0.8em;color:#aab3ff;">Realtor: ${appt.realtor}</p>
         `;
-        newAppt.addEventListener("click",()=>openEditModal(dayStr,index));
+        newAppt.addEventListener("click", () => openEditModal(dayStr, index));
 
-        // Calculate overlap positioning
-        const start = parseInt(appt.startTime.split(":")[0])*60 + parseInt(appt.startTime.split(":")[1]);
-        const end = parseInt(appt.endTime.split(":")[0])*60 + parseInt(appt.endTime.split(":")[1]);
-        const top = (start/ (24*60)) * 200;
-        const height = Math.max(25, ((end-start)/(24*60)) * 200);
+        // Compute vertical position & height
+        const [sH, sM] = appt.startTime.split(":").map(Number);
+        const [eH, eM] = appt.endTime.split(":").map(Number);
+        const startMinutes = sH * 60 + sM;
+        const endMinutes = eH * 60 + eM;
+        const top = (startMinutes / (24 * 60)) * 200;
+        const height = Math.max(25, ((endMinutes - startMinutes) / (24 * 60)) * 200);
         newAppt.style.top = top + "px";
         newAppt.style.height = height + "px";
 
-        // Handle overlaps: simple stagger by index
-        newAppt.style.left = (index*10) + "px";
-        newAppt.style.width = `calc(100% - ${(index*10)}px)`;
+        // Horizontal sizing: divide container by totalCols and position based on column
+        const col = typeof appt._colIndex === "number" ? appt._colIndex : 0;
+        const gapPx = 6; // small gap between columns
+        const percentWidth = 100 / totalCols;
+        newAppt.style.width = `calc(${percentWidth}% - ${gapPx}px)`;
+        newAppt.style.left = `calc(${col * percentWidth}% + ${col * gapPx}px)`;
+
+        // Visual indicator if there is more than one column (i.e., at least one overlap exists)
+        if (totalCols > 1) {
+          newAppt.classList.add("overlapping");
+        }
 
         container.appendChild(newAppt);
+
+        // cleanup temporary property
+        delete appt._colIndex;
       });
     }
   });
 }
 
-/* --- WEEK NAV BUTTONS WITH RELIABLE ANIMATION --- */
+/* --- WEEK NAV BUTTONS --- */
 const prevBtn = document.getElementById("prevWeek");
 const nextBtn = document.getElementById("nextWeek");
 const scheduleGrid = document.querySelector(".schedule-grid");
@@ -336,13 +394,17 @@ nextBtn.addEventListener("click", () => animateWeekChange("next"));
 /* --- ADD MODAL LOGIC --- */
 const addModal = document.getElementById("appointmentModal");
 const addButtons = document.querySelectorAll(".add-btn");
-const addClose = addModal.querySelector(".close");
+const addClose = document.getElementById("addClose");
 const addForm = document.getElementById("appointmentForm");
 
 addButtons.forEach(btn => btn.addEventListener("click", () => {
   addModal.style.display = "block";
-  addModal.dataset.dayIndex = Array.from(btn.parentElement.parentElement.children).indexOf(btn.parentElement);
+  // Determine day index robustly
+  const days = Array.from(document.querySelectorAll(".day"));
+  const dayIndex = days.indexOf(btn.parentElement);
+  addModal.dataset.dayIndex = dayIndex;
 }));
+
 addClose.addEventListener("click", () => addModal.style.display = "none");
 window.addEventListener("click", e => { if (e.target === addModal) addModal.style.display = "none"; });
 
@@ -352,7 +414,7 @@ addForm.addEventListener("submit", e => {
   const endTime = document.getElementById("endTimeInput").value;
   const address = document.getElementById("addressInput").value;
   const realtor = document.getElementById("realtorInput").value;
-  const dayIndex = parseInt(addModal.dataset.dayIndex);
+  const dayIndex = parseInt(addModal.dataset.dayIndex, 10);
   const dayDate = new Date(currentWeekStart);
   dayDate.setDate(currentWeekStart.getDate() + dayIndex);
   const dayStr = dayDate.toISOString().split("T")[0];
@@ -365,16 +427,16 @@ addForm.addEventListener("submit", e => {
 
 /* --- EDIT/DELETE MODAL --- */
 const editModal = document.getElementById("editModal");
-const editClose = editModal.querySelector(".close");
+const editClose = document.getElementById("editClose");
 const editForm = document.getElementById("editForm");
 const editStartTime = document.getElementById("editStartTime");
 const editEndTime = document.getElementById("editEndTime");
 const editAddress = document.getElementById("editAddress");
 const editRealtor = document.getElementById("editRealtor");
 const deleteBtn = document.getElementById("deleteBtn");
-let editDayStr, editIndex;
+let editDayStr = null, editIndex = null;
 
-function openEditModal(dayStrParam, indexParam){
+function openEditModal(dayStrParam, indexParam) {
   editDayStr = dayStrParam;
   editIndex = indexParam;
   const appt = appointmentsData[editDayStr][editIndex];
@@ -385,18 +447,28 @@ function openEditModal(dayStrParam, indexParam){
   editModal.style.display = "block";
 }
 
-editClose.addEventListener("click",()=>{editModal.style.display="none";});
-window.addEventListener("click",e=>{if(e.target===editModal)editModal.style.display="none";});
+editClose.addEventListener("click", () => { editModal.style.display = "none"; });
+window.addEventListener("click", e => { if (e.target === editModal) editModal.style.display = "none"; });
 
-editForm.addEventListener("submit",e=>{
+editForm.addEventListener("submit", e => {
   e.preventDefault();
-  appointmentsData[editDayStr][editIndex]={startTime:editStartTime.value,endTime:editEndTime.value,address:editAddress.value,realtor:editRealtor.value};
-  editModal.style.display="none";
+  if (editDayStr == null || editIndex == null) return;
+  appointmentsData[editDayStr][editIndex] = {
+    startTime: editStartTime.value,
+    endTime: editEndTime.value,
+    address: editAddress.value,
+    realtor: editRealtor.value
+  };
+  editModal.style.display = "none";
   renderAppointmentsForWeek();
 });
-deleteBtn.addEventListener("click",()=>{
-  appointmentsData[editDayStr].splice(editIndex,1);
-  editModal.style.display="none";
+
+deleteBtn.addEventListener("click", () => {
+  if (editDayStr == null || editIndex == null) return;
+  appointmentsData[editDayStr].splice(editIndex, 1);
+  // If array becomes empty, remove the key
+  if (appointmentsData[editDayStr].length === 0) delete appointmentsData[editDayStr];
+  editModal.style.display = "none";
   renderAppointmentsForWeek();
 });
 
