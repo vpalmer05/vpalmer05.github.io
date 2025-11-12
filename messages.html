@@ -5,6 +5,37 @@
   <title>Messages • VillaVista</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="vistastyles.css" />
+  <style>
+    /* --- Smooth slide-up animation --- */
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .slide-up {
+      animation: slideUp 0.3s ease-out;
+    }
+
+    .bubble-me {
+      background-color: #171D2E;
+      padding: 10px 15px;
+      border-radius: 15px;
+      margin: 5px 0;
+      max-width: 70%;
+      align-self: flex-end;
+    }
+
+    .row.right {
+      display: flex;
+      justify-content: flex-end;
+    }
+  </style>
 </head>
 <body class="vv-client">
   
@@ -18,7 +49,7 @@
   </header>
 
   <main class="messages-main">
-    <div class="chat-wrap">
+    <div class="chat-wrap" id="chat-wrap">
 
       <div class="row right">
         <div class="bubble bubble-me">
@@ -38,12 +69,41 @@
 
     </div>
 
-    <form class="chat-input" action="#" method="post">
-      <input type="text" aria-label="Type your message" placeholder="Message..." />
+    <form class="chat-input" id="chat-form">
+      <input type="text" id="message-input" aria-label="Type your message" placeholder="Message..." />
       <button type="submit" class="btn-send">Send</button>
     </form>
   </main>
 
   <footer class="client-footer">© 2025 VillaVista Co.</footer>
+
+  <script>
+    const form = document.getElementById('chat-form');
+    const input = document.getElementById('message-input');
+    const chatWrap = document.getElementById('chat-wrap');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = input.value.trim();
+      if (!text) return;
+
+      // Create message row
+      const row = document.createElement('div');
+      row.classList.add('row', 'right', 'slide-up');
+
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble', 'bubble-me');
+      bubble.textContent = text;
+
+      row.appendChild(bubble);
+      chatWrap.appendChild(row);
+
+      // Scroll to bottom
+      chatWrap.scrollTop = chatWrap.scrollHeight;
+
+      // Clear input
+      input.value = '';
+    });
+  </script>
 </body>
 </html>
