@@ -2,6 +2,21 @@
 const listingsUrl = 'listings.json';
 const imagesUrl = 'listingimages.json';
 
+// FAVORITES HELPERS
+const FAVORITES_KEY = 'vvFavorites';
+
+function getFavorites() {
+  try {
+    return JSON.parse(localStorage.getItem(FAVORITES_KEY)) || [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveFavorites(favs) {
+  localStorage.setItem(FAVORITES_KEY, JSON.stringify(favs));
+}
+
 // GRAB CONTAINER
 const container = document.getElementById('listingContainer');
 
@@ -9,16 +24,13 @@ const container = document.getElementById('listingContainer');
 Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
   .then(async ([listingsRes, imagesRes]) => {
 
-    // CHECK
     if (!listingsRes.ok || !imagesRes.ok) {
       throw new Error("Failed to load JSON data");
     }
 
-    // PARSE JSON
     const listings = await listingsRes.json();
     const images = await imagesRes.json();
 
-    // MERGE
     const listingsWithImages = listings.map(listing => {
       const match = images.find(img => img.id === listing.id);
       return {
@@ -27,16 +39,25 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
       };
     });
 
+    // Current favorites (as strings)
+    const favorites = getFavorites().map(String);
+
     // CLEAR CONTAINER
     container.innerHTML = "";
 
     // CARDS
     listingsWithImages.forEach(home => {
+      const idStr = String(home.id);
+      const isFav = favorites.includes(idStr);
+
       const card = document.createElement('article');
       card.className = 'listing-card';
+      card.dataset.id = idStr;
 
       card.innerHTML = `
-        <button class="favorite-heart" aria-label="Add to favorites">♡</button>
+        <button class="favorite-heart${isFav ? ' active' : ''}" aria-label="Add to favorites">
+          ${isFav ? '♥' : '♡'}
+        </button>
         <img src="${home.image}" alt="House" class="listing-image" />
         <div class="listing-content">
           <div class="listing-details">
@@ -53,11 +74,29 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
       container.appendChild(card);
     });
 
-    // FAVORITE HEART
+    // FAVORITE HEART CLICK HANDLER
     container.addEventListener('click', e => {
       if (e.target.classList.contains('favorite-heart')) {
-        e.target.classList.toggle('active');
-        e.target.textContent = e.target.classList.contains('active') ? '♥' : '♡';
+        const heart = e.target;
+        const card = heart.closest('.listing-card');
+        const idStr = card.dataset.id;
+
+        let favorites = getFavorites().map(String);
+
+        // Toggle UI
+        const nowActive = heart.classList.toggle('active');
+        heart.textContent = nowActive ? '♥' : '♡';
+
+        // Update localStorage
+        if (nowActive) {
+          if (!favorites.includes(idStr)) {
+            favorites.push(idStr);
+          }
+        } else {
+          favorites = favorites.filter(id => id !== idStr);
+        }
+
+        saveFavorites(favorites);
       }
     });
   })
@@ -68,4 +107,3 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
         Failed to load listings. Please try again later.
       </p>`;
   });
-
