@@ -1042,3 +1042,105 @@ body.realtor-home {
   .realtor-home .card-grid { flex-direction: column; gap: 1.5rem; align-items: center; }
   .realtor-home .card { width: 90%; height: 180px; }
 }
+
+/* MANAGE LISTINGS */
+
+body.realtor-manage {
+  background: #111a28;
+  color: #fff;
+  font-family: Georgia, "Times New Roman", serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.manage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 40px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  background: #111a28;
+}
+
+.manage-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.manage-nav a {
+  margin-left: 28px;
+  color: #fff;
+  opacity: .95;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.manage-nav a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.manage-main {
+  padding: 1.5rem 2rem 2.5rem;
+}
+
+.manage-grid .listing-card {
+  background: #ffffff;
+}
+
+.manage-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.2rem 0.9rem;
+  border-top: 1px solid #e5e5e5;
+  background: #faf7f1;
+}
+
+.manage-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.status-pill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.status-active {
+  background: rgba(17, 122, 39, 0.12);
+  color: #176c33;
+}
+
+.status-sold {
+  background: rgba(185, 161, 107, 0.18);
+  color: #7a6233;
+}
+
+.btn-manage {
+  border-radius: 999px;
+  border: 1px solid #c6bcae;
+  background: #fff;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-manage:hover {
+  background: #afa89e;
+  color: #fff;
+  border-color: #afa89e;
+}
+
+.manage-footer {
+  padding: 16px 24px 24px;
+  color: rgba(255,255,255,.85);
+  font-size: 13px;
+  background: #111a28;
+}

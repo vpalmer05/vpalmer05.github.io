@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="vistastyles.css">
 <head>
   <meta charset="UTF-8" />
   <title>Manage Listings</title>
+  <link rel="stylesheet" href="vistastyles.css">
 </head>
-<body>
-  <header>
+
+<body class="realtor-manage">
+  <header class="manage-header">
     <h1>Manage Listings</h1>
-    <nav>
-      <ul>
-      <li><a href="index.html">Log Out</a></li>
-      <li><a href="realtorportal.html">Home</a></li>
-      </ul>
+    <nav class="manage-nav">
+      <a href="realtorportal.html">Home</a>
+      <a href="index.html">Log Out</a>
     </nav>
   </header>
 
-  <main>
-    <p>Placeholder for managing listings</p>
+  <main class="manage-main">
+    <section class="listing-filters">
+      <input type="text" id="searchManage" placeholder="Search by city or address">
+      <select id="statusFilter">
+        <option value="all">All statuses</option>
+        <option value="active">Active</option>
+        <option value="sold">Sold</option>
+      </select>
+      <button id="applyManageFilters">Filter</button>
+    </section>
+
+    <section class="listing-grid manage-grid" id="listingContainer"></section>
   </main>
 
-  <footer>
+  <footer class="manage-footer">
     <small>© 2025 VillaVista Co.</small>
   </footer>
+
+  <script src="managelistings.js"></script>
 </body>
 </html>
