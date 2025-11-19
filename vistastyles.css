@@ -1191,7 +1191,6 @@ body.realtor-manage {
   background-color: #c0392b !important;
 }
 
-/* Remove dashed pending badge background */
 .pending-badge {
   display: inline-block;
   background: #f4f4f4;
