@@ -7,6 +7,7 @@
 </head>
 
 <body class="realtor-manage">
+
   <header class="manage-header">
     <h1>Manage Listings</h1>
     <nav class="manage-nav">
@@ -16,17 +17,26 @@
   </header>
 
   <main class="manage-main">
+
+    <section class="pending-section">
+      <div class="pending-header-row">
+        <h2>Pending Approvals</h2>
+        <p class="pending-subtitle">
+          New client submissions awaiting review.
+        </p>
+      </div>
+      <div class="listing-grid pending-grid" id="pendingContainer">
+      </div>
+    </section>
+
     <section class="listing-filters">
-      <input type="text" id="searchManage" placeholder="Search by city or address">
-      <select id="statusFilter">
-        <option value="all">All statuses</option>
-        <option value="active">Active</option>
-        <option value="sold">Sold</option>
-      </select>
+      <input type="text" id="searchManage" placeholder="Search by address">
       <button id="applyManageFilters">Filter</button>
     </section>
 
+
     <section class="listing-grid manage-grid" id="listingContainer"></section>
+
   </main>
 
   <footer class="manage-footer">
@@ -36,3 +46,4 @@
   <script src="managelistings.js"></script>
 </body>
 </html>
+

@@ -1144,3 +1144,62 @@ body.realtor-manage {
   font-size: 13px;
   background: #111a28;
 }
+
+/* ===== PENDING APPROVAL SECTION ===== */
+
+.pending-section {
+  margin-bottom: 2rem;
+}
+
+.pending-section h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.pending-subtitle {
+  margin-top: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+}
+
+/* Make pending cards match the normal listing cards */
+.pending-grid .listing-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+/* Colored approve / deny buttons */
+.btn-approve {
+  background-color: #2ecc71 !important; /* green */
+  border-color: #27ae60 !important;
+  color: #fff !important;
+}
+.btn-approve:hover {
+  background-color: #27ae60 !important;
+}
+
+.btn-deny {
+  background-color: #e74c3c !important; /* red */
+  border-color: #c0392b !important;
+  color: #fff !important;
+}
+.btn-deny:hover {
+  background-color: #c0392b !important;
+}
+
+/* Remove dashed pending badge background */
+.pending-badge {
+  display: inline-block;
+  background: #f4f4f4;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+

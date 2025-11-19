@@ -1,11 +1,122 @@
-// PATHS – same as listings.js
+// ===== Paths for the main listings (same as listings.js) =====
 const listingsUrl = 'listings.json';
 const imagesUrl = 'listingimages.json';
 
-// GRAB CONTAINER (same pattern as listings.js)
+// DOM elements
 const container = document.getElementById('listingContainer');
+const pendingContainer = document.getElementById('pendingContainer');
 
-// FETCH DATASET
+// ===== DEMO PENDING DATA (hard-coded for presentation) =====
+const demoPending = [
+  {
+    id: 1,
+    address: "742 Evergreen Terrace, Springfield, OH",
+    bedrooms: 4,
+    bathrooms: 2.5,
+    sqft: 2100,
+    price: 375000,
+    firstName: "Taylor",
+    lastName: "Morgan",
+    email: "taylor.morgan@example.com",
+    phone: "(330) 555-0192",
+    realtor: "Alex Carter"
+  },
+  {
+    id: 2,
+    address: "19 Lakeview Ct, Kent, OH",
+    bedrooms: 3,
+    bathrooms: 2,
+    sqft: 1850,
+    price: 329000,
+    firstName: "Jordan",
+    lastName: "Lee",
+    email: "jlee@example.com",
+    phone: "(330) 555-7712",
+    realtor: "Maria Gomez"
+  }
+];
+
+// ---- Render Pending Approvals ----
+function renderPendingApprovals() {
+  if (!pendingContainer) return;
+
+  pendingContainer.innerHTML = "";
+
+  if (!demoPending.length) {
+    pendingContainer.innerHTML = `
+      <p class="pending-empty">No pending submissions right now.</p>
+    `;
+    return;
+  }
+
+  demoPending.forEach(item => {
+    const card = document.createElement("article");
+    card.className = "listing-card pending-card";
+    card.dataset.id = String(item.id);
+
+    const priceText = item.price
+      ? `$${Number(item.price).toLocaleString()}`
+      : "Price TBD";
+
+    const infoParts = [];
+    if (item.bedrooms != null) infoParts.push(`${item.bedrooms} bed`);
+    if (item.bathrooms != null) infoParts.push(`${item.bathrooms} bath`);
+    if (item.sqft != null) infoParts.push(`${Number(item.sqft).toLocaleString()} sqft`);
+    const infoText = infoParts.length ? infoParts.join(" | ") : "Details pending";
+
+    const sellerName =
+      [item.firstName, item.lastName].filter(Boolean).join(" ") || "Unknown seller";
+
+    card.innerHTML = `
+      <div class="listing-content">
+        <p class="pending-badge">Client Submission</p>
+        <div class="listing-details">
+          <p class="listing-price">${priceText}</p>
+          <p class="listing-info">${infoText}</p>
+          <p class="listing-address">${item.address || "No address provided"}</p>
+          <p class="pending-meta">
+            Seller: ${sellerName}
+            ${item.email ? ` • ${item.email}` : ""}
+            ${item.phone ? ` • ${item.phone}` : ""}
+            ${item.realtor ? ` • Realtor: ${item.realtor}` : ""}
+          </p>
+        </div>
+      </div>
+
+      <div class="manage-actions">
+        <div class="manage-buttons">
+          <button class="btn-manage btn-approve">Approve</button>
+          <button class="btn-manage btn-deny">Deny</button>
+        </div>
+      </div>
+    `;
+
+    pendingContainer.appendChild(card);
+  });
+}
+
+// Approve / Deny buttons (demo-only)
+if (pendingContainer) {
+  pendingContainer.addEventListener("click", (e) => {
+    if (!e.target.matches(".btn-approve, .btn-deny")) return;
+
+    const card = e.target.closest(".listing-card");
+    if (!card) return;
+
+    const id = Number(card.dataset.id);
+    const idx = demoPending.findIndex(x => x.id === id);
+    if (idx !== -1) {
+      demoPending.splice(idx, 1);
+    }
+
+    renderPendingApprovals();
+  });
+}
+
+// Initial load for pending
+renderPendingApprovals();
+
+// ===== MAIN MANAGE LISTINGS (JSON-driven, remove-only) =====
 Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
   .then(async ([listingsRes, imagesRes]) => {
 
@@ -16,7 +127,6 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
     const listings = await listingsRes.json();
     const images = await imagesRes.json();
 
-    // Attach image URLs to each listing (same idea as listings.js)
     const listingsWithImages = listings.map(listing => {
       const match = images.find(img => img.id === listing.id);
       return {
@@ -25,17 +135,18 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
       };
     });
 
+    if (!container) return;
+
     // CLEAR CONTAINER
     container.innerHTML = "";
 
-    // BUILD MANAGE CARDS
+    // CREATE CARDS (remove-only)
     listingsWithImages.forEach(home => {
       const idStr = String(home.id);
 
       const card = document.createElement('article');
       card.className = 'listing-card';
       card.dataset.id = idStr;
-      card.dataset.status = 'active'; // default; can be wired to JSON later
 
       card.innerHTML = `
         <img src="${home.image}" alt="House" class="listing-image" />
@@ -43,16 +154,15 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
           <div class="listing-details">
             <p class="listing-price">${home.price}</p>
             <p class="listing-info">
-              ${home.bedrooms ?? "?"} bed | ${home.bathrooms ?? "?"} bath | 
+              ${home.bedrooms ?? "?"} bed | 
+              ${home.bathrooms ?? "?"} bath | 
               ${home.sqft ? home.sqft.toLocaleString() : "?"} sqft
             </p>
             <p class="listing-address">${home.address}</p>
           </div>
         </div>
         <div class="manage-actions">
-          <span class="status-pill status-active">Active</span>
           <div class="manage-buttons">
-            <button class="btn-manage btn-status">Mark as Sold</button>
             <button class="btn-manage btn-remove">Remove</button>
           </div>
         </div>
@@ -61,66 +171,40 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
       container.appendChild(card);
     });
 
-    // SET UP MANAGE BUTTON BEHAVIOR (event delegation)
+    // REMOVE existing listing cards
     container.addEventListener('click', e => {
-      const target = e.target;
-
-      // Remove listing card
-      if (target.classList.contains('btn-remove')) {
-        const card = target.closest('.listing-card');
+      if (e.target.classList.contains('btn-remove')) {
+        const card = e.target.closest('.listing-card');
         if (card) card.remove();
-      }
-
-      // Toggle Active / Sold
-      if (target.classList.contains('btn-status')) {
-        const card = target.closest('.listing-card');
-        if (!card) return;
-
-        const pill = card.querySelector('.status-pill');
-        const current = card.dataset.status;
-
-        if (current === 'active') {
-          card.dataset.status = 'sold';
-          pill.textContent = 'Sold';
-          pill.classList.remove('status-active');
-          pill.classList.add('status-sold');
-          target.textContent = 'Mark as Active';
-        } else {
-          card.dataset.status = 'active';
-          pill.textContent = 'Active';
-          pill.classList.remove('status-sold');
-          pill.classList.add('status-active');
-          target.textContent = 'Mark as Sold';
-        }
       }
     });
 
-    // FILTERS (same style as listings, but for status + address text)
+    // SIMPLE FILTER
     const filterButton = document.getElementById('applyManageFilters');
     const searchInput = document.getElementById('searchManage');
-    const statusSelect = document.getElementById('statusFilter');
 
-    if (filterButton && searchInput && statusSelect) {
+    if (filterButton && searchInput) {
       filterButton.addEventListener('click', () => {
         const search = searchInput.value.toLowerCase();
-        const status = statusSelect.value;
         const cards = container.querySelectorAll('.listing-card');
 
         cards.forEach(card => {
-          const address = card.querySelector('.listing-address')?.textContent.toLowerCase() || '';
+          const address = card
+            .querySelector('.listing-address')
+            ?.textContent.toLowerCase() || '';
 
-          const textMatch = search === '' || address.includes(search);
-          const statusMatch = status === 'all' || card.dataset.status === status;
-
-          card.style.display = (textMatch && statusMatch) ? '' : 'none';
+          const match = address.includes(search) || search === '';
+          card.style.display = match ? '' : 'none';
         });
       });
     }
   })
   .catch(err => {
     console.error("Error loading manage listings:", err);
-    container.innerHTML = `
-      <p style="color: red; padding: 1rem;">
-        Failed to load listings. Please try again later.
-      </p>`;
+    if (container) {
+      container.innerHTML = `
+        <p style="color: red; padding: 1rem;">
+          Failed to load listings. Please try again later.
+        </p>`;
+    }
   });
