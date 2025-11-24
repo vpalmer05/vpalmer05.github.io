@@ -50,32 +50,185 @@
     <section class="chat-area">
       <div class="chat-header">Kyle Smith</div>
 
-      <div class="chat-content">
-        <div class="bubble left">
-          Hi, I saw the listing for the 3-bedroom house on Lakeview Drive and I’m interested. 
-          Could you tell me if it’s still available, and also whether there are any upcoming open houses scheduled?
-        </div>
-
-        <div class="bubble right beige">
-          Hi Kyle, thank you for reaching out! Yes, the property on Lakeview Drive is still available. 
-          There’s no open house scheduled at the moment, but I’d be happy to set up a private showing for you. 
-          Do you have any preferred times this week?
-        </div>
-
-        <div class="bubble left">
-          That sounds great. I’m free after 4 pm during the weekdays.
-        </div>
-
-        <div class="bubble left">
-          Are you available for a call tomorrow? I have some questions I’d like to ask before scheduling a showing.
-        </div>
+      <div class="chat-content" id="chatContent" style="overflow-y:auto; max-height:60vh; padding:16px;">
+        <!-- messages will be rendered here -->
       </div>
 
-      <form class="chat-input" action="#" method="post">
-        <input type="text" placeholder="Message..." />
+      <form class="chat-input" id="chatForm">
+        <input type="text" id="chatMessage" placeholder="Message..." autocomplete="off" />
         <button type="submit">Send</button>
       </form>
     </section>
   </main>
+
+  <script>
+    // Elements
+    const chatForm = document.getElementById('chatForm');
+    const chatMessage = document.getElementById('chatMessage');
+    const chatContent = document.getElementById('chatContent');
+    const chatHeader = document.querySelector('.chat-header');
+    const searchBar = document.querySelector('.search-bar');
+    const chatListItems = document.querySelectorAll('.chat-list li');
+
+    // In-memory chat store (simple). Each value is an array of HTML strings for messages.
+    const chats = {
+      'Kyle Smith': [
+        '<div class="bubble left">Hi, I saw the listing for the 3-bedroom house on Lakeview Drive and I’m interested. Could you tell me if it’s still available, and also whether there are any upcoming open houses scheduled?</div>',
+        '<div class="bubble right beige">Hi Kyle, thank you for reaching out! Yes, the property on Lakeview Drive is still available. There’s no open house scheduled at the moment, but I’d be happy to set up a private showing for you. Do you have any preferred times this week?</div>',
+        '<div class="bubble left">That sounds great. I’m free after 4 pm during the weekdays.</div>',
+        '<div class="bubble left">Are you available for a call tomorrow? I have some questions I’d like to ask before scheduling a showing.</div>'
+      ],
+      'Eric Johnson': [
+        '<div class="bubble left">Hi, I saw the listing for 123 Oakwood Drive. Is it still available?</div>',
+        '<div class="bubble right beige">Hi Eric! Yes, it is still on the market. Would you like to schedule a tour?</div>'
+      ],
+      'Sarah Madison': [
+        '<div class="bubble left">Thanks for the tour today! I\'d like to make an offer on the house.</div>',
+        '<div class="bubble right beige">That\'s great news, Sarah! I can help you start the offer paperwork.</div>'
+      ],
+      'Betty Williams': [
+        '<div class="bubble left">Good afternoon! I noticed the listing on Pinecrest Drive...</div>',
+        '<div class="bubble right beige">Hi Betty! Yes, I\'d be happy to get you more details.</div>'
+      ],
+      'John Adams': [
+        '<div class="bubble left">Are you available for a walkthrough?</div>',
+        '<div class="bubble right beige">Absolutely! I\'d be happy to walk you through it.</div>'
+      ]
+    };
+
+    let currentChat = 'Kyle Smith';
+
+    // Utility: attach delete handlers to any message bubbles that have .delete-btn
+    function attachDeleteButtons() {
+      const deleteButtons = chatContent.querySelectorAll('.delete-btn');
+      deleteButtons.forEach(btn => {
+        if (btn._hasHandler) return; // avoid duplicate handlers
+        btn._hasHandler = true;
+        btn.addEventListener('click', () => {
+          // remove from DOM
+          const bubble = btn.closest('.bubble');
+          if (!bubble) return;
+          bubble.remove();
+          // persist change to chats store
+          chats[currentChat] = Array.from(chatContent.children).map(c => c.outerHTML);
+        });
+      });
+    }
+
+    // Render chat from the chats store
+    function renderChat(name) {
+      currentChat = name;
+      chatHeader.textContent = name;
+      // populate content
+      const items = chats[name] || [];
+      chatContent.innerHTML = items.join('') || '<p style="opacity:0.7">No messages yet.</p>';
+
+      // Add delete buttons to outgoing (right) messages
+      Array.from(chatContent.querySelectorAll('.bubble')).forEach(bubble => {
+        // Only add a delete button to right-side (outgoing) bubbles
+        if (bubble.classList.contains('right')) {
+          if (!bubble.querySelector('.delete-btn')) {
+            const del = document.createElement('button');
+            del.className = 'delete-btn';
+            del.type = 'button';
+            del.title = 'Delete message';
+            del.textContent = '✖'; // ✖
+            del.style.border = 'none';
+            del.style.background = 'transparent';
+            del.style.cursor = 'pointer';
+            del.style.marginLeft = '8px';
+            // place button inside bubble at the end
+            bubble.appendChild(del);
+          }
+        }
+      });
+
+      attachDeleteButtons();
+      chatContent.scrollTop = chatContent.scrollHeight;
+    }
+
+    // Sidebar click handlers
+    chatListItems.forEach(li => {
+      li.addEventListener('click', () => {
+        // clear active
+        chatListItems.forEach(i => i.classList.remove('active'));
+        li.classList.add('active');
+        const name = li.querySelector('.name').textContent;
+        renderChat(name);
+      });
+    });
+
+    // Search bar filter
+    searchBar.addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      chatListItems.forEach(li => {
+        const name = li.querySelector('.name').textContent.toLowerCase();
+        const preview = li.querySelector('.preview').textContent.toLowerCase();
+        li.style.display = (name.includes(query) || preview.includes(query)) ? '' : 'none';
+      });
+    });
+
+    // Send message
+    chatForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const text = chatMessage.value.trim();
+      if (!text) return;
+
+      // create bubble element
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble right beige';
+
+      const span = document.createElement('span');
+      span.textContent = text;
+      bubble.appendChild(span);
+
+      const del = document.createElement('button');
+      del.className = 'delete-btn';
+      del.type = 'button';
+      del.title = 'Delete message';
+      del.textContent = '✖';
+      del.style.border = 'none';
+      del.style.background = 'transparent';
+      del.style.cursor = 'pointer';
+      del.style.marginLeft = '8px';
+      bubble.appendChild(del);
+
+      // append to DOM
+      chatContent.appendChild(bubble);
+      chatMessage.value = '';
+      chatMessage.focus();
+      chatContent.scrollTop = chatContent.scrollHeight;
+
+      // persist to chats store
+      chats[currentChat] = Array.from(chatContent.children).map(c => c.outerHTML);
+
+      // attach delete handler for this new button
+      attachDeleteButtons();
+
+      // update preview text in sidebar for current contact
+      updatePreviewForCurrentChat();
+    });
+
+    function updatePreviewForCurrentChat() {
+      // find the corresponding li and update its preview text with last message snippet
+      chatListItems.forEach(li => {
+        const name = li.querySelector('.name').textContent;
+        if (name === currentChat) {
+          const last = chats[name] && chats[name].length ? stripTags(chats[name][chats[name].length - 1]) : '';
+          li.querySelector('.preview').textContent = last.slice(0, 40) + (last.length > 40 ? '...' : '');
+        }
+      });
+    }
+
+    function stripTags(html) {
+      const tmp = document.createElement('div');
+      tmp.innerHTML = html;
+      return tmp.textContent || tmp.innerText || '';
+    }
+
+    // Initialize first render
+    renderChat(currentChat);
+
+  </script>
 </body>
 </html>
