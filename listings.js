@@ -99,11 +99,24 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
         saveFavorites(favorites);
       }
     });
+
+    // DEMO: make the first listing card open housedemo.html when clicked
+    const demoCard = container.querySelector('.listing-card');
+    if (demoCard) {
+      demoCard.classList.add('demo-detail-card');
+      demoCard.addEventListener('click', (e) => {
+        // Ignore clicks on the favorite heart so it still works
+        if (e.target.closest('.favorite-heart')) return;
+        window.location.href = 'housedemo.html';
+      });
+    }
   })
   .catch(err => {
     console.error("Error loading listings:", err);
-    container.innerHTML = `
-      <p style="color: red; padding: 1rem;">
-        Failed to load listings. Please try again later.
-      </p>`;
+    if (container) {
+      container.innerHTML = `
+        <p style="color: red; padding: 1rem;">
+          Failed to load listings. Please try again later.
+        </p>`;
+    }
   });

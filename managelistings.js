@@ -208,3 +208,12 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
         </p>`;
     }
   });
+
+    const demoManageCard = container.querySelector('.listing-card');
+    if (demoManageCard) {
+      demoManageCard.classList.add('demo-detail-card');
+      demoManageCard.addEventListener('click', (e) => {
+        if (e.target.closest('button')) return;
+        window.location.href = 'housedemo.html';
+      });
+    }
