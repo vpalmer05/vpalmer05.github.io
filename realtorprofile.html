@@ -4,6 +4,32 @@
   <meta charset="UTF-8">
   <title>Realtor Profile</title>
   <link rel="stylesheet" href="vistastyles.css">
+
+  <style>
+    /* Top-screen sliding notification */
+    .notification {
+      position: fixed;
+      top: -100px; /* start above the viewport */
+      left: 50%;
+      transform: translateX(-50%);
+      background: #4caf50;
+      color: white;
+      padding: 20px 35px;
+      border-radius: 0 0 12px 12px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      opacity: 0;
+      transition: top 0.5s ease, opacity 0.5s ease;
+      z-index: 9999;
+    }
+
+    .notification.show {
+      top: 0; /* slide into view */
+      opacity: 1;
+    }
+  </style>
+
   <script>
     function showSection(sectionId) {
       document.querySelectorAll('.tab-section').forEach(sec => sec.style.display = 'none');
@@ -14,6 +40,9 @@
 </head>
 
 <body class="vv-realtor">
+
+  <!-- TOP SCREEN NOTIFICATION -->
+  <div id="gift-notification" class="notification">Gift request submitted! 🎁</div>
 
   <main class="profile-container">
     <!-- SIDEBAR -->
@@ -135,7 +164,7 @@
       <!-- CLIENT APPRECIATION -->
       <div id="client-appreciation" class="tab-section" style="display:none;">
         <h2>Client Appreciation</h2>
-        <form>
+        <form id="gift-form">
           <div class="form-grid">
             <div class="form-field">
               <label for="gift-type">Gift Type</label>
@@ -161,13 +190,27 @@
     </section>
   </main>
 
-
   <script>
+    // Sidebar tab highlight
     document.querySelectorAll('.profile-menu a').forEach(link => {
       link.addEventListener('click', () => {
         document.querySelectorAll('.profile-menu a').forEach(a => a.classList.remove('active'));
         link.classList.add('active');
       });
+    });
+
+    // Gift notification logic
+    const giftForm = document.getElementById('gift-form');
+    const notification = document.getElementById('gift-notification');
+
+    giftForm.addEventListener('submit', (e) => {
+      e.preventDefault(); // remove if submitting normally
+
+      notification.classList.add('show');
+
+      setTimeout(() => {
+        notification.classList.remove('show');
+      }, 3000);
     });
   </script>
 
