@@ -8,6 +8,7 @@
 
 <body class="realtor-manage">
 
+  <!-- HEADER -->
   <header class="manage-header">
     <h1>Manage Listings</h1>
     <nav class="manage-nav">
@@ -16,8 +17,10 @@
     </nav>
   </header>
 
+  <!-- MAIN -->
   <main class="manage-main">
 
+    <!-- Pending approvals demo section -->
     <section class="pending-section">
       <div class="pending-header-row">
         <h2>Pending Approvals</h2>
@@ -26,19 +29,35 @@
         </p>
       </div>
       <div class="listing-grid pending-grid" id="pendingContainer">
+        <!-- Pending cards injected by JS -->
       </div>
     </section>
 
+    <!-- Filters for manage listings -->
     <section class="listing-filters">
-      <input type="text" id="searchManage" placeholder="Search by address">
+      <input 
+        type="text" 
+        id="searchManage" 
+        placeholder="Search by address"
+      />
+
+      <select id="priceManageFilter">
+        <option value="">Any Price</option>
+        <option value="200000">Up to $200k</option>
+        <option value="400000">Up to $400k</option>
+        <option value="600000">Up to $600k</option>
+      </select>
+
       <button id="applyManageFilters">Filter</button>
+      <button id="resetManageFilters">Reset</button>
     </section>
 
-
+    <!-- Main listings grid -->
     <section class="listing-grid manage-grid" id="listingContainer"></section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="manage-footer">
     <small>© 2025 VillaVista Co.</small>
   </footer>
@@ -46,4 +65,3 @@
   <script src="managelistings.js"></script>
 </body>
 </html>
-

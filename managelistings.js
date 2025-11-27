@@ -131,9 +131,31 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
       const match = images.find(img => img.id === listing.id);
       return {
         ...listing,
-        image: match ? match.url : "images/placeholder.jpg"
+        image: match ? match.url : "images/placeholder.jpg",
+        hasImage: Boolean(match) // <— real image vs placeholder
       };
     });
+
+    // Helper: incomplete = missing price OR address OR image
+    function isIncompleteListing(home) {
+      const priceMissing =
+        home.price == null ||
+        home.price === "null" ||
+        home.price === "";
+      const addressMissing =
+        !home.address ||
+        home.address === "null" ||
+        home.address === "";
+      const imageMissing = !home.hasImage;
+
+      return priceMissing || addressMissing || imageMissing;
+    }
+
+    // Order: complete first, incomplete (incl. no-image) last
+    const orderedListings = [
+      ...listingsWithImages.filter(home => !isIncompleteListing(home)),
+      ...listingsWithImages.filter(home => isIncompleteListing(home))
+    ];
 
     if (!container) return;
 
@@ -141,24 +163,34 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
     container.innerHTML = "";
 
     // CREATE CARDS (remove-only)
-    listingsWithImages.forEach(home => {
+    orderedListings.forEach(home => {
       const idStr = String(home.id);
 
       const card = document.createElement('article');
       card.className = 'listing-card';
       card.dataset.id = idStr;
 
+      // store numeric price for filters
+      let priceNum = NaN;
+      if (typeof home.price === 'number') {
+        priceNum = home.price;
+      } else if (typeof home.price === 'string') {
+        const digits = home.price.replace(/[^\d]/g, '');
+        if (digits) priceNum = Number(digits);
+      }
+      card.dataset.price = Number.isNaN(priceNum) ? '' : String(priceNum);
+
       card.innerHTML = `
         <img src="${home.image}" alt="House" class="listing-image" />
         <div class="listing-content">
           <div class="listing-details">
-            <p class="listing-price">${home.price}</p>
+            <p class="listing-price">${home.price ?? "Price TBD"}</p>
             <p class="listing-info">
               ${home.bedrooms ?? "?"} bed | 
               ${home.bathrooms ?? "?"} bath | 
               ${home.sqft ? home.sqft.toLocaleString() : "?"} sqft
             </p>
-            <p class="listing-address">${home.address}</p>
+            <p class="listing-address">${home.address ?? "Address coming soon"}</p>
           </div>
         </div>
         <div class="manage-actions">
@@ -179,23 +211,53 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
       }
     });
 
-    // SIMPLE FILTER
+    // ====== FILTERS (search + price) ======
     const filterButton = document.getElementById('applyManageFilters');
+    const resetButton = document.getElementById('resetManageFilters');
     const searchInput = document.getElementById('searchManage');
+    const priceFilter = document.getElementById('priceManageFilter');
 
-    if (filterButton && searchInput) {
-      filterButton.addEventListener('click', () => {
-        const search = searchInput.value.toLowerCase();
-        const cards = container.querySelectorAll('.listing-card');
+    function applyManageFilters() {
+      const search = (searchInput?.value || '').toLowerCase().trim();
+      const maxPrice = priceFilter?.value ? Number(priceFilter.value) : Infinity;
 
-        cards.forEach(card => {
-          const address = card
-            .querySelector('.listing-address')
-            ?.textContent.toLowerCase() || '';
+      const cards = container.querySelectorAll('.listing-card');
+      cards.forEach(card => {
+        const address = (card.querySelector('.listing-address')?.textContent || '').toLowerCase();
+        const cardPrice = card.dataset.price ? Number(card.dataset.price) : 0;
 
-          const match = address.includes(search) || search === '';
-          card.style.display = match ? '' : 'none';
-        });
+        let match = true;
+
+        if (search && !address.includes(search)) {
+          match = false;
+        }
+
+        if (match && maxPrice !== Infinity && cardPrice && cardPrice > maxPrice) {
+          match = false;
+        }
+
+        card.style.display = match ? '' : 'none';
+      });
+    }
+
+    if (filterButton) {
+      filterButton.addEventListener('click', applyManageFilters);
+    }
+    if (resetButton) {
+      resetButton.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        if (priceFilter) priceFilter.value = '';
+        applyManageFilters();
+      });
+    }
+
+    // DEMO: make the first manage listing card open housedemo.html when clicked
+    const demoManageCard = container.querySelector('.listing-card');
+    if (demoManageCard) {
+      demoManageCard.classList.add('demo-detail-card');
+      demoManageCard.addEventListener('click', (e) => {
+        if (e.target.closest('button')) return;
+        window.location.href = 'housedemo.html';
       });
     }
   })
@@ -208,12 +270,3 @@ Promise.all([fetch(listingsUrl), fetch(imagesUrl)])
         </p>`;
     }
   });
-
-    const demoManageCard = container.querySelector('.listing-card');
-    if (demoManageCard) {
-      demoManageCard.classList.add('demo-detail-card');
-      demoManageCard.addEventListener('click', (e) => {
-        if (e.target.closest('button')) return;
-        window.location.href = 'housedemo.html';
-      });
-    }
