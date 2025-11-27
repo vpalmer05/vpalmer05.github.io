@@ -1299,3 +1299,9 @@ body.realtor-manage {
 .demo-detail-card {
   cursor: pointer;
 }
+
+.property-contact-btn {
+  margin-top: 0.8rem;
+  display: inline-flex;
+  padding-inline: 24px;
+}
