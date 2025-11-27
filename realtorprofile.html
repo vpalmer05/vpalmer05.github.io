@@ -49,7 +49,10 @@
     <aside class="profile-menu">
       <div class="top-section">
         <div class="avatar">🏡</div>
-        <p>Welcome back, Realtor!</p>
+
+        <!-- UPDATED WELCOME MESSAGE WITH DYNAMIC NAME -->
+        <p>Welcome back, <span id="realtor-name-display">Realtor</span>!</p>
+
         <div class="rating">★★★★★</div>
         <div class="role">VillaVista Licensed Realtor</div>
 
@@ -211,6 +214,21 @@
       setTimeout(() => {
         notification.classList.remove('show');
       }, 3000);
+    });
+
+    // UPDATE SIDEBAR NAME WHEN PERSONAL INFO IS SAVED
+    const personalInfoForm = document.querySelector('#personal-info form');
+    const nameInput = document.getElementById('name');
+    const realtorNameDisplay = document.getElementById('realtor-name-display');
+
+    personalInfoForm.addEventListener('submit', (e) => {
+      e.preventDefault(); // remove if posting to backend
+
+      const newName = nameInput.value.trim();
+
+      if (newName !== "") {
+        realtorNameDisplay.textContent = newName;
+      }
     });
   </script>
 
