@@ -20,7 +20,7 @@
     <!-- Left Side -->
     <aside class="profile-menu">
       <div class="avatar">👤</div>
-      <p>Welcome back, Client!</p>
+      <p id="welcome-text">Welcome back, Client!</p>
       <ul>
         <li><a href="profile.html">Personal Information</a></li>
         <li><a href="listings.html">View Listings</a></li>
@@ -34,8 +34,9 @@
     <section class="profile-form">
       <h2>Edit Your Information</h2>
 
-      <form action="#" method="post" novalidate>
+      <form id="profile-form" action="#" method="post" novalidate>
         <div class="form-grid">
+
           <div class="form-field">
             <label for="name">Full Name</label>
             <input id="name" type="text">
@@ -79,5 +80,20 @@
   </main>
 
   <footer class="client-footer">© 2025 VillaVista Co.</footer>
+
+  <!-- SCRIPT TO UPDATE WELCOME MESSAGE -->
+  <script>
+    document.getElementById("profile-form").addEventListener("submit", function(e) {
+      e.preventDefault(); // stop form from reloading page
+
+      const name = document.getElementById("name").value.trim();
+      const welcome = document.getElementById("welcome-text");
+
+      if (name !== "") {
+        welcome.textContent = "Welcome back, " + name + "!";
+      }
+    });
+  </script>
+
 </body>
 </html>
